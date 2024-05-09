@@ -1,0 +1,84 @@
+.second {
+  top: -5rem;
+  right: 13rem;
+  opacity: 0;
+  animation: fadeInTopBottom 0.7s ease-in-out forwards;
+  animation-delay: 0.7s;
+}
+
+.fourth {
+  opacity: 0;
+  top: 33rem;
+  left: 30rem;
+  animation: fadeInBottomTop 1s ease-in-out forwards;
+  animation-delay: 1.4s;
+}
+
+@keyframes fadeInBottomTop {
+  from {
+    opacity: 0;
+    top: 80rem;
+  }
+  to {
+    opacity: 1;
+    top: 33rem;
+  }
+}
+
+@keyframes fadeInTopBottom {
+  from {
+    opacity: 0;
+    top: -10rem;
+  }
+  to {
+    opacity: 1;
+    top: -5rem;
+  }
+}
+
+@media only screen and (max-width: 1445px) {
+  .fourth {
+    top: 30rem;
+    left: 20rem;
+  }
+}
+@media only screen and (max-width: 1028px) {
+  .fourth {
+    top: 25rem !important;
+    left: 20rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .fourth {
+    top: 27rem !important;
+    left: 12rem;
+  }
+  .second{
+    right: 10rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .second{
+    right: 2rem;
+  }
+  .fourth {
+    top: 32rem !important;
+    left: 34rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+
+  .second{
+    right: -5rem;
+  }
+  .fourth {
+    left: 25rem;
+  }
+}
+
+
+
