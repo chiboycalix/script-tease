@@ -1,84 +1,303 @@
-.second {
-  top: -5rem;
-  right: 13rem;
+.first {
+  position: absolute;
+  background: rgb(20, 105, 40);
+  background: linear-gradient(
+    90deg,
+    rgba(20, 105, 40, 1) 22%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  top: 40%;
+  left: 30%;
+  animation: firstAnimation 0.7s linear forwards;
   opacity: 0;
-  animation: fadeInTopBottom 0.7s ease-in-out forwards;
+}
+
+@keyframes firstAnimation {
+  from {
+    opacity: 0;
+    left: 60%;
+  }
+  to {
+    opacity: 1;
+    left: 30%;
+  }
+}
+
+.second {
+  position: absolute;
+  width: 15rem;
+  height: 26rem;
+  top: -15%;
+  right: 12%;
+  background: rgb(6, 34, 136);
+  background: linear-gradient(
+    0deg,
+    rgba(6, 34, 136, 1) 22%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  opacity: 0;
+  animation: secondAnimation 0.7s linear forwards;
   animation-delay: 0.7s;
+  transform: rotate(-25deg);
+  z-index: -999999 !important;
+  border-radius: 20px;
+}
+
+@keyframes secondAnimation {
+  from {
+    opacity: 0;
+    top: -20%;
+  }
+  to {
+    opacity: 1;
+    top: -15%;
+  }
+}
+
+.third {
+  opacity: 0;
+  position: absolute;
+  width: 20rem;
+  height: 12rem;
+  transform: rotate(-90deg);
+  border-radius: 10rem 10rem 0 0;
+  background: rgb(234, 119, 29);
+  background: linear-gradient(
+    90deg,
+    rgba(234, 119, 29, 1) 22%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  top: 70%;
+  right: -7%;
+  animation: thirdAnimation 0.7s linear forwards;
+  animation-delay: 0.7s;
+}
+
+@keyframes thirdAnimation {
+  from {
+    opacity: 0;
+    right: -20%;
+  }
+  to {
+    opacity: 1;
+    right: -7%;
+  }
 }
 
 .fourth {
   opacity: 0;
-  top: 33rem;
-  left: 30rem;
-  animation: fadeInBottomTop 1s ease-in-out forwards;
+  position: absolute;
+  width: 15rem;
+  height: 24rem;
+  animation: fourthAnimantion 1s linear forwards;
   animation-delay: 1.4s;
+  background: rgb(19, 104, 40);
+  background: linear-gradient(
+    184deg,
+    rgba(19, 104, 40, 1) 22%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  border-radius: 20px;
+  transform: rotate(-25deg);
+  top: 100%;
+  left: 55%;
 }
 
-@keyframes fadeInBottomTop {
+@keyframes fourthAnimantion {
   from {
     opacity: 0;
-    top: 80rem;
+    top: 140%;
   }
   to {
     opacity: 1;
-    top: 33rem;
-  }
-}
-
-@keyframes fadeInTopBottom {
-  from {
-    opacity: 0;
-    top: -10rem;
-  }
-  to {
-    opacity: 1;
-    top: -5rem;
+    top: 100%;
   }
 }
 
 @media only screen and (max-width: 1445px) {
-  .fourth {
-    top: 30rem;
-    left: 20rem;
+  .first {
+    left: 10%;
+    animation: first1445Animantion 0.7s linear forwards;
   }
-}
-@media only screen and (max-width: 1028px) {
   .fourth {
-    top: 25rem !important;
-    left: 20rem;
+    left: 38%;
+    animation: fourth1445Animantion 1s linear forwards;
+    animation-delay: 1.4s;
+  }
+  @keyframes first1445Animantion {
+    from {
+      opacity: 0;
+      left: 60%;
+    }
+    to {
+      opacity: 1;
+      left: 30%;
+    }
+  }
+  @keyframes fourth1445Animantion {
+    from {
+      opacity: 0;
+      top: 140%;
+      left: 55%;
+    }
+    to {
+      opacity: 1;
+      top: 95%;
+      left: 58%;
+    }
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1280px) {
+  .first {
+    left: 10%;
+    animation: first1280Animantion 0.7s linear forwards;
+  }
   .fourth {
-    top: 27rem !important;
-    left: 12rem;
+    left: 42%;
+    animation: fourth1280Animantion 1s linear forwards;
+    animation-delay: 1.4s;
+  }
+  .third {
+    right: -10% !important;
+  }
+
+  @keyframes first1280Animantion {
+    from {
+      opacity: 0;
+      left: 60%;
+    }
+    to {
+      opacity: 1;
+      left: 10%;
+    }
+  }
+  @keyframes fourth1280Animantion {
+    from {
+      opacity: 0;
+      top: 140%;
+      left: 55%;
+    }
+    to {
+      opacity: 1;
+      top: 100%;
+      left: 42%;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 1024px) {
+  .first {
+    width: 15rem;
+    height: 15rem;
+    animation: first1024Animantion 0.7s linear forwards;
   }
   .second{
-    right: 10rem;
+    width: 12rem;
+    right: 20% !important;
+  }
+  .third{
+    width: 15rem;
+    height: 8rem;
+    right: -11% !important;
+  }
+  .fourth{
+    width: 12rem;
+    left: 45%;
+    top: 100%;
+    animation: fourth1024Animantion 1s linear forwards;
+    animation-delay: 1.4s;
+  }
+
+  @keyframes first1024Animantion {
+    from {
+      opacity: 0;
+      left: 60%;
+    }
+    to {
+      opacity: 1;
+      left: 0%;
+    }
+  }
+
+  @keyframes fourth1024Animantion {
+    from {
+      opacity: 0;
+      top: 140%;
+      left: 55%;
+    }
+    to {
+      opacity: 1;
+      top: 85%;
+      left: 35%;
+    }
   }
 }
 
 @media only screen and (max-width: 768px) {
-
-  .second{
-    right: 2rem;
+  .first {
+    transform: translateY(90%) rotate(-25deg) translateX(110%);
   }
-  .fourth {
-    top: 32rem !important;
-    left: 34rem;
+  .second {
+   transform: translateY(-40%) rotate(-25deg) translateX(40%);
+  }
+  .third{
+    transform: translateY(220%) rotate(-90deg);
+    right: -7% !important;
+  }
+  .fourth{
+    transform: translateY(110%) rotate(-25deg) translateX(100%);
   }
 }
 
 @media only screen and (max-width: 640px) {
-
-  .second{
-    right: -5rem;
+  .first {
+    transform: translateY(110%) rotate(-25deg) translateX(110%);
+    width: 12rem;
+    height: 12rem;
   }
-  .fourth {
-    left: 25rem;
+  .second {
+   transform: translateY(-40%) rotate(-25deg) translateX(30%);
+   width: 10rem;
+  }
+  .third{
+    transform: translateY(340%) rotate(-90deg);
+    right: -7.5% !important;
+    width: 12rem;
+    height: 6rem;
+  }
+  .fourth{
+    transform: translateY(110%) rotate(-25deg) translateX(100%);
+    width: 10rem;
   }
 }
 
-
-
+@media only screen and (max-width: 375px) {
+  .first {
+    transform: translateY(70%) rotate(-25deg) translateX(10%);
+    width: 10rem;
+    height: 10rem;
+  }
+  .second {
+   transform: translateY(-40%) rotate(-25deg) translateX(0%);
+   width: 8rem;
+   height: 20rem;
+  }
+  .third{
+    transform: translateY(320%) rotate(-90deg);
+    right: -11% !important;
+    width: 10rem;
+    height: 5rem;
+    /* display: none; */
+  }
+  .fourth{
+    transform: translateY(150%) rotate(-25deg) translateX(20%);
+    width: 8rem;
+    height: 14rem;
+    /* display: none; */
+  }
+}
