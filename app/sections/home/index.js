@@ -7,7 +7,8 @@ import "./home.css";
 
 const FirstSection = () => {
   return (
-    <div className="flex flex-col lg:flex-row">
+    <div className="">
+      <div className="flex flex-col lg:flex-row">
       <motion.div
         className="2xl:basis-4/12 xl:basis-5/12 lg:basis-6/12"
         initial={{ opacity: 0, y: 15 }}
@@ -45,6 +46,7 @@ const FirstSection = () => {
         <div className="second"></div>
         <div className="third"></div>
         <div className="fourth"></div>
+      </div>
       </div>
     </div>
   );
