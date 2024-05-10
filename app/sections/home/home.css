@@ -276,7 +276,7 @@
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 430px) {
   .first {
     transform: translateY(70%) rotate(-25deg) translateX(10%);
     width: 10rem;
