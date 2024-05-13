@@ -14,13 +14,20 @@ module.exports = {
   prefix: "",
   theme: {
     screens: {
-      xs: "275px",
+      xxs: "275px",
+      xs: "375px",
       sm: "640px",
       md: "768px",
       lg: "1024px",
       xl: "1280px",
       "2xl": "1445px",
       "3xl": "1536px",
+    },
+    colors: {
+      primary: '#5c6ac4',
+      secondary: '#ecc94b',
+      white: '#ffffff',
+      black:'#000000'
     },
     container: {
       center: true,
