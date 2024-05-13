@@ -1,11 +1,7 @@
-import { FirstSection } from "@/app/sections";
-
 export default function Home() {
   return (
-    <main
-      className="xs:flex xs:flex-col
-    ">
-      <FirstSection />
+    <main className="px-[2rem] py-[1rem]">
+      hi
     </main>
   );
 }
