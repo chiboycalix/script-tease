@@ -1,0 +1,5 @@
+.home-page-blog__wrapper{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 2rem 4rem;
+}

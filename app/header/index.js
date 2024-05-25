@@ -40,6 +40,7 @@ const Header = () => {
             src={showMenu ? CloseIcon : MenuIcon}
             className="w-5"
             onClick={() => setShowMenu(!showMenu)}
+            alt="show"
           />
           {showMenu && <MobileNav showMenu={showMenu} />}
         </div>

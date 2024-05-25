@@ -85,7 +85,7 @@ export function NavMenu() {
     <NavigationMenu className="nav">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="hover:text-primary">About us</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="hover:text-primary text-[1rem]">About us</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="w-[15rem] px-4 py-4 flex flex-col gap-y-10">
               {aboutLinks.map((aboutLink) => {
@@ -103,7 +103,7 @@ export function NavMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="hover:text-primary">Community</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="hover:text-primary text-[1rem]">Community</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="w-[15rem] px-4 py-4 flex flex-col gap-y-10">
               {communityLinks.map((communityLink) => {
@@ -124,7 +124,7 @@ export function NavMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="hover:text-primary">Partners</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="hover:text-primary text-[1rem]">Partners</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="w-[15rem] px-4 py-4 flex flex-col gap-y-10">
               {partnersLinks.map((partnersLink) => {
@@ -145,7 +145,7 @@ export function NavMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/docs" legacyBehavior passHref className="text-[1rem]">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Documentation
             </NavigationMenuLink>
