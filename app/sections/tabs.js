@@ -6,7 +6,7 @@ import {
   TabsBody,
   Tab,
   TabPanel,
-} from "../components/material/MTailwind";
+} from "../../components/material/MTailwind";
 
 const HomeTabs = () => {
   const [activeTab, setActiveTab] = React.useState("University");

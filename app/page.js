@@ -1,9 +1,9 @@
-import HomeSlider from "@/sections/partners";
-import HomeTabs from "@/sections/tabs";
-import HomeCarousel from "@/sections/carousel";
-import HomePageBlogs from "@/sections/homePageBlogs";
-import HomePageEvents from "@/sections/homePageEvents";
-import Faqs from "@/sections/faqs";
+import HomeSlider from "@/app/sections/partners";
+import HomeTabs from "@/app/sections/tabs";
+import HomeCarousel from "@/app/sections/carousel";
+import HomePageBlogs from "@/app/sections/homePageBlogs";
+import HomePageEvents from "@/app/sections/homePageEvents";
+import Faqs from "@/app/sections/faqs";
 
 export default function Home() {
   return (

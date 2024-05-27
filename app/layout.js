@@ -4,7 +4,7 @@ import Head from "next/head";
 import React from "react";
 import { ThemeProvider } from "@material-tailwind/react";
 import { Button } from "@/components/ui/button";
-import { NavbarWithMegaMenu } from "@/sections/header";
+import { NavbarWithMegaMenu } from "@/app/sections/header";
 import "@/components/styles/layout.css";
 
 export default function RootLayout({ children }) {
