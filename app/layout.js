@@ -2,10 +2,11 @@
 import "./globals.css";
 import Header from "./header";
 import Head from "next/head";
+import React from "react";
 import { ThemeProvider } from "@material-tailwind/react";
 import { Button } from "@/components/ui/button";
 import "./layout.css";
-import React from "react";
+import { NavbarWithMegaMenu } from "./nav";
 
 export default function RootLayout({ children }) {
   React.useEffect(() => {
@@ -52,8 +53,11 @@ export default function RootLayout({ children }) {
             </div>
           </div>
           <div id="myHeader" className="myHeader">
-            <Header />
+            {/* <Header /> */}
+            <hr className="block lg:hidden text-black opacity-100"/>
+            <NavbarWithMegaMenu />
           </div>
+          
           <div className="content">{children}</div>
         </body>
       </ThemeProvider>
