@@ -1,14 +1,14 @@
-import { CarouselSpacing } from "./carousel-spacing";
-import { CarouselDefault } from "./carousel";
-import { TabsDefault } from "./tabs";
-import HomePageBlogs from "./home-page-blog";
-import Faqs from "./faqs";
-import HomePageEvents from "./home-page-events";
+import HomeSlider from "@/sections/partners";
+import HomeTabs from "@/sections/tabs";
+import HomeCarousel from "@/sections/carousel";
+import HomePageBlogs from "@/sections/homePageBlogs";
+import HomePageEvents from "@/sections/homePageEvents";
+import Faqs from "@/sections/faqs";
 
 export default function Home() {
   return (
     <main>
-      <CarouselDefault />
+      <HomeCarousel />
       <div className="bg-white">
         <div className="px-[5rem] py-[2rem] bg-[#B8DBD9] flex text-black mt-[5rem]">
           <div className="basis-[20%]">
@@ -46,7 +46,7 @@ export default function Home() {
               Our educational partners
             </p>
           </div>
-          <CarouselSpacing />
+          <HomeSlider />
         </div>
       </div>
       <div className="px-[5rem] py-[5rem] bg-white">
@@ -59,7 +59,7 @@ export default function Home() {
             growth.
           </p>
         </div>
-        <TabsDefault />
+        <HomeTabs />
       </div>
       <div className="px-[5rem] py-[5rem] bg-white">
         <div className="flex flex-col items-center mb-[4rem]">

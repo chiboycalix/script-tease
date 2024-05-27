@@ -1,12 +1,11 @@
 "use client";
-import "./globals.css";
-import Header from "./header";
+import "@/app/globals.css";
 import Head from "next/head";
 import React from "react";
 import { ThemeProvider } from "@material-tailwind/react";
 import { Button } from "@/components/ui/button";
-import "./layout.css";
-import { NavbarWithMegaMenu } from "./nav";
+import { NavbarWithMegaMenu } from "@/sections/header";
+import "@/components/styles/layout.css";
 
 export default function RootLayout({ children }) {
   React.useEffect(() => {
@@ -53,7 +52,6 @@ export default function RootLayout({ children }) {
             </div>
           </div>
           <div id="myHeader" className="myHeader">
-            {/* <Header /> */}
             <hr className="block lg:hidden text-black opacity-100"/>
             <NavbarWithMegaMenu />
           </div>

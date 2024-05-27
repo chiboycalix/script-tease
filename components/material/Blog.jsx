@@ -7,7 +7,7 @@ import {
   Button,
 } from "@material-tailwind/react";
  
-export function CardDefault() {
+export function Blog() {
   return (
     <Card className="mt-6 w-full">
       <CardHeader color="blue-gray" className="relative h-56">

@@ -54,7 +54,7 @@ const sliderData = [
   },
 ];
 
-export function CarouselSpacing() {
+const HomeSlider = () => {
   return (
     <Carousel
       className="w-full"
@@ -81,3 +81,4 @@ export function CarouselSpacing() {
     </Carousel>
   );
 }
+export default HomeSlider;

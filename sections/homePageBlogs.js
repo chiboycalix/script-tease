@@ -1,7 +1,7 @@
 import React from "react";
 import BlogOne from "@/assets/blog-1.png";
 import Image from "next/image";
-import "./home-page-blog.css";
+import "@/components/styles/home-page-blog.css";
 
 const homePageBlogs = [
   {

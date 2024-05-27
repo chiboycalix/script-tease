@@ -1,8 +1,14 @@
 "use client";
 import * as React from "react";
-import { Tabs, TabsHeader, TabsBody, Tab, TabPanel } from "./MTailwind";
+import {
+  Tabs,
+  TabsHeader,
+  TabsBody,
+  Tab,
+  TabPanel,
+} from "../components/material/MTailwind";
 
-export function TabsDefault() {
+const HomeTabs = () => {
   const [activeTab, setActiveTab] = React.useState("University");
   const data = [
     {
@@ -297,4 +303,6 @@ export function TabsDefault() {
       </TabsBody>
     </Tabs>
   );
-}
+};
+
+export default HomeTabs;

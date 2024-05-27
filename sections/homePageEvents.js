@@ -1,9 +1,7 @@
 import React from "react";
 import BlogOne from "@/assets/blog-1.png";
-import Image from "next/image";
-import "./home-page-events.css";
 import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
-import EventOne from "@/assets/blog-1.png";
+import "@/components/styles/home-page-events.css";
 
 const homePageEvents = [
   {

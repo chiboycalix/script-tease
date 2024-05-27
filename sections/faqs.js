@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Accordion, AccordionHeader, AccordionBody } from "./MTailwind";
+import { Accordion, AccordionHeader, AccordionBody } from "../components/material/MTailwind";
 
 function Icon({ id, open }) {
   return (

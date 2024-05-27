@@ -1,11 +1,9 @@
 "use client";
-import Image from "next/image";
-import { Carousel, IconButton, Typography } from "./MTailwind";
+import { Carousel, IconButton } from "@/components/material/MTailwind";
 import { Button } from "@/components/ui/button";
-import SuccessImg from "../assets/img.png";
-import { CardDefault } from "./card";
+import { Blog } from "@/components/material/Blog.jsx";
 
-export function CarouselDefault() {
+const HomeCarousel = () => {
   return (
     <Carousel
       transition={{ duration: 1 }}
@@ -119,9 +117,10 @@ export function CarouselDefault() {
           <Button className="bg-primary text-white mt-10">All Blogs</Button>
         </div>
         <div className="h-full flex-1">
-          <CardDefault />
+          <Blog />
         </div>
       </div>
     </Carousel>
   );
 }
+export default HomeCarousel
