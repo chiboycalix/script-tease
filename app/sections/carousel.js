@@ -2,8 +2,15 @@
 import { Carousel, IconButton } from "@/components/material/MTailwind";
 import { Button } from "@/components/ui/button";
 import { Blog } from "@/components/material/Blog.jsx";
+import { useRouter } from 'next/navigation'
+
 
 const HomeCarousel = () => {
+  const router = useRouter()
+
+  const handleClick = () => {
+    router.push('/blogs', { scroll: false })
+  }
   return (
     <Carousel
       transition={{ duration: 1 }}
@@ -114,7 +121,7 @@ const HomeCarousel = () => {
             Join us in shaping the future, fostering growth, and achieving
             unparalleled success through meaningful collaboration.
           </p>
-          <Button className="bg-primary text-white mt-10">All Blogs</Button>
+          <Button className="bg-primary text-white mt-10" onClick={handleClick}>All Blogs</Button>
         </div>
         <div className="h-full flex-1">
           <Blog />

@@ -1,6 +1,5 @@
 'use client'
 import * as React from "react";
-
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image";
 import {
@@ -71,7 +70,7 @@ const HomeSlider = () => {
       <CarouselContent className="-ml-1">
         {sliderData.map((d, index) => (
           <CarouselItem key={index} className="basis-1/6 flex items-center">
-            <Image src={d.img} className="w-40" />
+            <Image src={d.img} className="w-40" alt="d.img"/>
           </CarouselItem>
         ))}
       </CarouselContent>

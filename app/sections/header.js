@@ -174,7 +174,7 @@ const Header = () => {
   return (
     <Navbar className="w-full max-w-screen-3xl rounded-none bg-white px-6 bg-opacity-100 py-2">
       <div className="flex items-center justify-between text-black">
-        <Link href="#" className="cursor-pointer py-1.5 lg:ml-2">
+        <Link href="/" className="cursor-pointer py-1.5 lg:ml-2">
           Logo
         </Link>
         <div className="hidden lg:block">
