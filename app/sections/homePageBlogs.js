@@ -31,10 +31,10 @@ const homePageBlogs = [
 ];
 const HomePageBlogs = () => {
   return (
-    <div className="home-page-blog__wrapper">
+    <div className="grid gap-16 lg:grid-cols-2 grid-cols-1">
       {homePageBlogs.map((homePageBlog) => {
         return (
-          <div key={homePageBlog.id} className="flex justify-between gap-5 items-start pb-[2rem] border-b-[1px] cursor-pointer border-[#CFD4D8]">
+          <div key={homePageBlog.id} className="flex flex-col sm:flex-row justify-between gap-5 items-start pb-[2rem] border-b-[1px] cursor-pointer border-[#CFD4D8]">
             <div className="basis-[35%] hover:scale-105">
               <Image src={homePageBlog.img} className="rounded-md h-[8.3rem]" alt="homePageBlog.img"/>
             </div>

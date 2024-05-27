@@ -69,7 +69,7 @@ const HomeSlider = () => {
     >
       <CarouselContent className="-ml-1">
         {sliderData.map((d, index) => (
-          <CarouselItem key={index} className="basis-1/6 flex items-center">
+          <CarouselItem key={index} className="basis-1/1 md:basis-1/4 lg:basis-1/6 flex items-center">
             <Image src={d.img} className="w-40" alt="d.img"/>
           </CarouselItem>
         ))}

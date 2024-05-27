@@ -31,11 +31,11 @@ const homePageEvents = [
 ];
 const HomePageEvents = () => {
   return (
-    <div className="home-page-events__wrapper">
+    <div className="grid gap-16 lg:grid-cols-2 grid-cols-1">
       {homePageEvents.map((homePageEvent) => {
         return (
           <div
-            className="relative  flex items-center justify-center w-full"
+            className="relative flex items-center justify-center w-full"
             key={homePageEvent.id}
           >
             <DirectionAwareHover imageUrl={homePageEvent.img}>

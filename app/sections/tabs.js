@@ -15,7 +15,7 @@ const HomeTabs = () => {
       label: "University",
       value: "University",
       desc: (
-        <div className="flex justify-between gap-5">
+        <div className="grid gap-5 lg:grid-cols-2 grid-cols-1">
           <div
             className="basis-1/2 p-[2rem] rounded-xl"
             style={{
@@ -104,7 +104,7 @@ const HomeTabs = () => {
       label: "Organisation",
       value: "organisation",
       desc: (
-        <div className="flex justify-between gap-5">
+        <div className="grid gap-5 lg:grid-cols-2 grid-cols-1">
           <div
             className="basis-1/2 rounded-xl p-[2rem]"
             style={{
@@ -188,7 +188,7 @@ const HomeTabs = () => {
       label: "Student",
       value: "student",
       desc: (
-        <div className="flex justify-between gap-5">
+        <div className="grid gap-5 lg:grid-cols-2 grid-cols-1">
           <div
             className="basis-1/2 p-[3rem] rounded-xl"
             style={{
@@ -279,7 +279,7 @@ const HomeTabs = () => {
             key={value}
             value={value}
             onClick={() => setActiveTab(value)}
-            className={`font-black text-[28px] ${
+            className={`font-black text-[18px] xl:text-[24px] ${
               activeTab === value ? "text-primary" : ""
             }`}
           >
