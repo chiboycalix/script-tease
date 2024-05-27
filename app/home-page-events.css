@@ -1,0 +1,5 @@
+.home-page-events__wrapper{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 4rem 4rem;
+}

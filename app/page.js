@@ -3,6 +3,7 @@ import { CarouselDefault } from "./carousel";
 import { TabsDefault } from "./tabs";
 import HomePageBlogs from "./home-page-blog";
 import Faqs from "./faqs";
+import HomePageEvents from "./home-page-events";
 
 export default function Home() {
   return (
@@ -82,6 +83,19 @@ export default function Home() {
         </div>
         <Faqs />
       </div>
+
+      <div className="px-[5rem] py-[5rem] bg-white w-full">
+        <div className="flex flex-col items-center mb-[4rem]">
+          <p className="text-[72px] font-black text-[#0B1720] tracking-tighter leading-[78px]">
+            Events
+          </p>
+          <p className="font-semibold text-[32px] leading-10">
+            These are upcoming events
+          </p>
+        </div>
+        <HomePageEvents />
+      </div>
+
     </main>
   );
 }
