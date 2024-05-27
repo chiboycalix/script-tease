@@ -4,7 +4,8 @@ import Head from "next/head";
 import React from "react";
 import { ThemeProvider } from "@material-tailwind/react";
 import { Button } from "@/components/ui/button";
-import { NavbarWithMegaMenu } from "@/app/sections/header";
+import Header from "@/app/sections/header";
+import Footer from "@/app/sections/footer";
 import "@/components/styles/layout.css";
 
 export default function RootLayout({ children }) {
@@ -53,10 +54,11 @@ export default function RootLayout({ children }) {
           </div>
           <div id="myHeader" className="myHeader">
             <hr className="block lg:hidden text-black opacity-100"/>
-            <NavbarWithMegaMenu />
+            <Header />
           </div>
           
           <div className="content">{children}</div>
+          <Footer />
         </body>
       </ThemeProvider>
     </html>

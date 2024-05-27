@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import {
   Navbar,
@@ -152,13 +152,16 @@ const NavList = () => {
   return (
     <List className="mt-4 mb-6 lg:mt-0 lg:mb-0 lg:flex-row lg:p-3">
       <NavListMenu navListMenuItems={navListMenuItems} menuTitle={"About Us"} />
-      <NavListMenu navListMenuItems={navListMenuItems} menuTitle={"Community"} />
+      <NavListMenu
+        navListMenuItems={navListMenuItems}
+        menuTitle={"Community"}
+      />
       <NavListMenu navListMenuItems={navListMenuItems} menuTitle={"Partners"} />
     </List>
   );
-}
+};
 
-export function NavbarWithMegaMenu() {
+const Header = () => {
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -201,4 +204,6 @@ export function NavbarWithMegaMenu() {
       </Collapse>
     </Navbar>
   );
-}
+};
+
+export default Header
