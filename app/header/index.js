@@ -6,26 +6,13 @@ import MenuIcon from "../../assets/menu-black.png";
 import CloseIcon from "../../assets/close-black.png";
 import Image from "next/image";
 import MobileNav from "./MobileNav";
+import './header.css';
 
 const Header = () => {
   const [showMenu, setShowMenu] = React.useState(false);
 
   return (
-    <div className="bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-      <div className="flex justify-between items-center px-[2rem] py-[1rem]">
-        <div className="hidden lg:block">Revenue</div>
-        <p className="lg:hidden block">+1 (555) 555-1234</p>
-        <div className="flex justify-between items-center gap-5">
-          <div className="">
-            <Button className="bg-primary text-white lg:bg-white lg:text-black">
-              Meet Sponsors
-            </Button>
-          </div>
-          <div className="hidden lg:block">
-            <p>+1 (555) 555-1234</p>
-          </div>
-        </div>
-      </div>
+    <div className="bg-white header">
       <hr className="block lg:hidden text-black opacity-30"/>
       <div className="flex justify-between items-center px-[2rem] py-[1rem]">
         <div>Logo</div>

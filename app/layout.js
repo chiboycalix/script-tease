@@ -3,8 +3,27 @@ import "./globals.css";
 import Header from "./header";
 import Head from "next/head";
 import { ThemeProvider } from "@material-tailwind/react";
+import { Button } from "@/components/ui/button";
+import "./layout.css";
+import React from "react";
 
 export default function RootLayout({ children }) {
+  React.useEffect(() => {
+    window.onscroll = function () {
+      myFunction();
+    };
+
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+  }, []);
   return (
     <html lang="en">
       <Head>
@@ -15,10 +34,27 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </Head>
+
       <ThemeProvider>
         <body>
-          <Header />
-          {children}
+          <div className="flex justify-between items-center px-[2rem] py-[1rem] bg-white">
+            <div className="hidden lg:block">Revenue</div>
+            <p className="lg:hidden block">+1 (555) 555-1234</p>
+            <div className="flex justify-between items-center gap-5">
+              <div className="">
+                <Button className="bg-primary text-white lg:bg-white lg:text-black">
+                  Meet Sponsors
+                </Button>
+              </div>
+              <div className="hidden lg:block">
+                <p>+1 (555) 555-1234</p>
+              </div>
+            </div>
+          </div>
+          <div id="myHeader" className="myHeader">
+            <Header />
+          </div>
+          <div className="content">{children}</div>
         </body>
       </ThemeProvider>
     </html>
