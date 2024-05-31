@@ -87,7 +87,7 @@ export default function Home() {
         </div>
         <Faqs />
       </div>
-      <div className="px-[1.5rem] xl:px-[5rem] py-[5rem] bg-white w-full">
+      <div className="px-[1.5rem] xl:px-[5rem] py-[5rem] bg-white">
         <div className="flex flex-col items-center mb-[4rem]">
           <p className="text-[24px] lg:text-[28px] xl:text-[32px] font-black text-[#0B1720] tracking-tighter leading-[78px]">
             Events
