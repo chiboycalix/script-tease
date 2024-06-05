@@ -48,7 +48,7 @@ const aboutUs = [
     title: "Contact",
     description: "Find the perfect solution for your needs.",
     icon: PhoneIcon,
-    path: "our-story"
+    path: "contact-us"
   },
 ];
 const community = [
