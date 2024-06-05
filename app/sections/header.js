@@ -56,25 +56,25 @@ const community = [
     title: "Blog",
     description: "Find the perfect solution for your needs.",
     icon: Bars4Icon,
-    path: "our-story"
+    path: "blogs"
   },
   {
     title: "Partnership",
     description: "Reach out to us for assistance or inquiries",
     icon: GlobeAmericasIcon,
-    path: "our-story"
+    path: "partnerships"
   },
   {
     title: "Events",
     description: "Find the perfect solution for your needs.",
     icon: RectangleGroupIcon,
-    path: "our-story"
+    path: "events"
   },
   {
-    title: "Programes",
+    title: "Programs",
     description: "Explore limited-time deals and bundles",
     icon: TagIcon,
-    path: "our-story"
+    path: "programs"
   },
 ];
 const partners = [
