@@ -174,16 +174,16 @@ const NavList = () => {
       <NavListMenu navListMenuItems={aboutUs} menuTitle={"About Us"} />
       <NavListMenu navListMenuItems={community} menuTitle={"Community"} />
       <NavListMenu navListMenuItems={partners} menuTitle={"Partners"} />
-      <p>
+      <Link href="/faqs">
         <ListItem className="flex items-center gap-2 py-2 pr-4 mt-2 text-gray-900 hover:bg-[#F3FCFC] hover:text-primary">
-          FAQs
+          Faqs
         </ListItem>
-      </p>
-      <p>
+      </Link>
+      <Link href="/contact-us">
         <ListItem className="flex items-center gap-2 py-2 pr-4 mt-2 text-gray-900 hover:bg-[#F3FCFC] hover:text-primary">
           Contact us
         </ListItem>
-      </p>
+      </Link>
     </List>
   );
 };
