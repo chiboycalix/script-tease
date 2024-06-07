@@ -53,7 +53,7 @@ const sliderData = [
   },
 ];
 
-const HomeSlider = () => {
+const Partners = () => {
   return (
     <Carousel
       className="w-full"
@@ -80,4 +80,4 @@ const HomeSlider = () => {
     </Carousel>
   );
 }
-export default HomeSlider;
+export default Partners;

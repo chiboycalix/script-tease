@@ -1,4 +1,4 @@
-import HomeSlider from "@/app/sections/partners";
+import Partners from "@/app/sections/partners";
 import HomeTabs from "@/app/sections/tabs";
 import HomeCarousel from "@/app/sections/carousel";
 import HomePageBlogs from "@/app/sections/homePageBlogs";
@@ -50,7 +50,7 @@ export default function Home() {
             </p>
           </div>
 
-          <HomeSlider />
+          <Partners />
         </div>
       </div>
       <div className="px-[1.5rem] xl:px-[5rem] py-[5rem] bg-white">
