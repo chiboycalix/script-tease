@@ -1,6 +1,7 @@
 import React from 'react'
 import BlogOne from "@/assets/blog-1.png";
 import Image from "next/image";
+import GovernmentBlog from '../sections/governmentBlogs';
 
 const GovernmentOrganisation = () => {
   return (
@@ -15,84 +16,7 @@ const GovernmentOrganisation = () => {
     </div>
 
     <div className="grid grid-cols-2 gap-6">
-      <div className="grid grid-cols-2 gap-4">
-        <div className="rounded-md">
-          <Image
-            src={BlogOne}
-            alt="BlogOne"
-            className="rounded-md h-[200px]"
-          />
-          <div className="mt-[1rem] cursor-pointer">
-            <p className="text-[18px] font-bold text-[#207de9]">
-              WEB DESIGN
-            </p>
-            <p className="text-[21px] font-extrabold hover:text-[#207de9] cursor-pointer mt-[0.5rem]">
-              40 Simple Minimalist Web Design Examples (Inspiration)
-            </p>
-
-            <p className="text-[#869298] text-[16px] mt-[1rem]">
-              22 min read
-            </p>
-          </div>
-        </div>
-        <div className="rounded-md">
-          <Image
-            src={BlogOne}
-            alt="BlogOne"
-            className="rounded-md h-[200px]"
-          />
-          <div className="mt-[1rem] cursor-pointer">
-            <p className="text-[18px] font-bold text-[#207de9]">
-              WEB DESIGN
-            </p>
-            <p className="text-[21px] font-extrabold hover:text-[#207de9] cursor-pointer mt-[0.5rem]">
-              40 Simple Minimalist Web Design Examples (Inspiration)
-            </p>
-
-            <p className="text-[#869298] text-[16px] mt-[1rem]">
-              22 min read
-            </p>
-          </div>
-        </div>
-        <div className="rounded-md">
-          <Image
-            src={BlogOne}
-            alt="BlogOne"
-            className="rounded-md h-[200px]"
-          />
-          <div className="mt-[1rem] cursor-pointer">
-            <p className="text-[18px] font-bold text-[#207de9]">
-              WEB DESIGN
-            </p>
-            <p className="text-[21px] font-extrabold hover:text-[#207de9] cursor-pointer mt-[0.5rem]">
-              40 Simple Minimalist Web Design Examples (Inspiration)
-            </p>
-
-            <p className="text-[#869298] text-[16px] mt-[1rem]">
-              22 min read
-            </p>
-          </div>
-        </div>
-        <div className="rounded-md">
-          <Image
-            src={BlogOne}
-            alt="BlogOne"
-            className="rounded-md h-[200px]"
-          />
-          <div className="mt-[1rem] cursor-pointer">
-            <p className="text-[18px] font-bold text-[#207de9]">
-              WEB DESIGN
-            </p>
-            <p className="text-[21px] font-extrabold hover:text-[#207de9] cursor-pointer mt-[0.5rem]">
-              40 Simple Minimalist Web Design Examples (Inspiration)
-            </p>
-
-            <p className="text-[#869298] text-[16px] mt-[1rem]">
-              22 min read
-            </p>
-          </div>
-        </div>
-      </div>
+      <GovernmentBlog />
       <div className="rounded-md bg-[#EFF6FE]">
         <Image
           src={BlogOne}

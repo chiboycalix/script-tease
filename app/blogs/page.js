@@ -2,7 +2,7 @@ import React from "react";
 import GovernmentOrganisationBlogs from "./governmentOrganisation";
 import CompaniesBlogs from "./companies";
 import UniversitiesBlogs from "./universities";
-import LastSectionBlog from "./lastSection";
+import StudentsBlogs from "../sections/studentsBlogs";
 
 const Blogs = () => {
   return (
@@ -10,7 +10,7 @@ const Blogs = () => {
       <UniversitiesBlogs />
       <CompaniesBlogs />
       <GovernmentOrganisationBlogs />
-      <LastSectionBlog />
+      <StudentsBlogs />
     </div>
   );
 };
