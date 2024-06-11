@@ -1,3 +1,5 @@
+"use client"
+import { useRouter } from "next/navigation";
 import Partners from "@/app/sections/partners";
 import HomeTabs from "@/app/sections/tabs";
 import HomeCarousel from "@/app/sections/carousel";
@@ -6,6 +8,8 @@ import HomePageEvents from "@/app/sections/homePageEvents";
 import Faqs from "@/app/sections/faqs";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <main>
       <HomeCarousel />
@@ -86,6 +90,10 @@ export default function Home() {
           </p>
         </div>
         <Faqs />
+        <div className="mt-[5rem] w-[20%] ml-[40%]">
+
+        <button className="bg-[#207CE8] text-white text-[21px] font-bold w-full py-[1rem] rounded cursor-pointer" onClick={() => router.push("/faqs", {scroll: false})}>More FAQs</button>
+        </div>
       </div>
       <div className="px-[1.5rem] xl:px-[5rem] py-[5rem] bg-white">
         <div className="flex flex-col items-center mb-[4rem]">

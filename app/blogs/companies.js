@@ -1,5 +1,5 @@
 import React from "react";
-import HomePageBlogs from "../sections/homePageBlogs";
+import CompaniesBlogs from "@/app/sections/companiesBlog";
 
 const Companies = () => {
   return (
@@ -10,7 +10,7 @@ const Companies = () => {
           <p className="text-[32px] font-extrabold">Companies</p>
         </div>
       </div>
-      <HomePageBlogs />
+      <CompaniesBlogs />
     </div>
   );
 };

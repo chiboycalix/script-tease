@@ -1,15 +1,16 @@
 "use client";
-import "@/app/globals.css";
-import Head from "next/head";
 import React from "react";
-import { ThemeProvider } from "@material-tailwind/react";
+import Head from "next/head";
+import { ThemeProvider } from "@/components/material/MTailwind";
 import { Button } from "@/components/ui/button";
 import Header from "@/app/sections/header";
 import Footer from "@/app/sections/footer";
+import "@/app/globals.css";
 import "@/components/styles/layout.css";
 
 export default function RootLayout({ children }) {
   React.useEffect(() => {
+    if(typeof window === 'undefined') return;
     window.onscroll = function () {
       myFunction();
     };
@@ -53,10 +54,9 @@ export default function RootLayout({ children }) {
             </div>
           </div>
           <div id="myHeader" className="myHeader">
-            <hr className="block lg:hidden text-black opacity-100"/>
+            <hr className="block lg:hidden text-black opacity-100" />
             <Header />
           </div>
-          
           <div className="content">{children}</div>
           <Footer />
         </body>
