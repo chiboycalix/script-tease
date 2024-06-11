@@ -44,7 +44,7 @@ const CompaniesBlogs = () => {
             </div>
             <div className="flex-1">
               <p className="text-[18px] font-bold leading-[22px] mb-2 text-primary">{companiesBlog.category}</p>
-            <Link href={`/blogs/${companiesBlog.slug}`}>
+            <Link href={`/blogs/${companiesBlog.slug}`} prefetch>
               <p className="text-[21px] font-extrabold leading-[29px] hover:text-primary">{companiesBlog.title}</p>
             </Link>
             </div>

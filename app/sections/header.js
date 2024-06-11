@@ -36,19 +36,19 @@ const aboutUs = [
     title: "Our Story",
     description: "Find the perfect solution for your needs.",
     icon: SquaresPlusIcon,
-    path: "our-story"
+    path: "our-story",
   },
   {
     title: "Our Values",
     description: "Meet and learn about our dedication",
     icon: UserGroupIcon,
-    path: "our-values"
+    path: "our-values",
   },
   {
     title: "Contact",
     description: "Find the perfect solution for your needs.",
     icon: PhoneIcon,
-    path: "contact-us"
+    path: "contact-us",
   },
 ];
 const community = [
@@ -56,25 +56,25 @@ const community = [
     title: "Blog",
     description: "Find the perfect solution for your needs.",
     icon: Bars4Icon,
-    path: "blogs"
+    path: "blogs",
   },
   {
     title: "Partnership",
     description: "Reach out to us for assistance or inquiries",
     icon: GlobeAmericasIcon,
-    path: "partnerships"
+    path: "partnerships",
   },
   {
     title: "Events",
     description: "Find the perfect solution for your needs.",
     icon: RectangleGroupIcon,
-    path: "events"
+    path: "events",
   },
   {
     title: "Programs",
     description: "Explore limited-time deals and bundles",
     icon: TagIcon,
-    path: "programs"
+    path: "programs",
   },
 ];
 const partners = [
@@ -82,19 +82,19 @@ const partners = [
     title: "Products",
     description: "Find the perfect solution for your needs.",
     icon: SquaresPlusIcon,
-    path: "our-story"
+    path: "our-story",
   },
   {
     title: "About Us",
     description: "Meet and learn about our dedication",
     icon: UserGroupIcon,
-    path: "our-story"
+    path: "our-story",
   },
   {
     title: "Blog",
     description: "Find the perfect solution for your needs.",
     icon: Bars4Icon,
-    path: "our-story"
+    path: "our-story",
   },
 ];
 
@@ -103,7 +103,7 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const renderItems = navListMenuItems.map(
     ({ icon, title, description, path }, key) => (
-      <Link href={path} key={key}>
+      <Link href={`/${path}`} key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg hover:bg-[#F3FCFC] hover:text-primary">
           <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
             {" "}
@@ -199,37 +199,56 @@ const Header = () => {
   }, []);
 
   return (
-    <Navbar className="w-full max-w-screen-3xl rounded-none bg-white px-6 bg-opacity-100 py-2">
-      <div className="flex items-center justify-between text-black">
-        <Link href="/" className="cursor-pointer py-1.5 lg:ml-2">
-          Logo
-        </Link>
-        <div className="hidden lg:block">
-          <NavList />
+    <>
+      <div className="flex justify-between items-center px-[2rem] py-[1rem] bg-white">
+        <div className="hidden lg:block">Revenue</div>
+        <p className="lg:hidden block">+1 (555) 555-1234</p>
+        <div className="flex justify-between items-center gap-5">
+          <div className="">
+            <Button className="bg-primary text-white lg:bg-white lg:text-black">
+              Meet Sponsors
+            </Button>
+          </div>
+          <div className="hidden lg:block">
+            <p>+1 (555) 555-1234</p>
+          </div>
         </div>
-        <div className="hidden gap-2 lg:flex">
-          <Button className="bg-primary text-white">Get Proposal</Button>
-        </div>
-        <IconButton
-          variant="text"
-          color="blue-gray"
-          className="lg:hidden"
-          onClick={() => setOpenNav(!openNav)}
-        >
-          {openNav ? (
-            <XMarkIcon className="h-6 w-6" strokeWidth={2} />
-          ) : (
-            <Bars3Icon className="h-6 w-6" strokeWidth={2} />
-          )}
-        </IconButton>
       </div>
-      <Collapse open={openNav}>
-        <NavList />
-        <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Button className="bg-primary text-white">Get Proposal</Button>
-        </div>
-      </Collapse>
-    </Navbar>
+      <div id="myHeader" className="myHeader">
+        <hr className="block lg:hidden text-black opacity-100" />
+        <Navbar className="w-full max-w-screen-3xl rounded-none bg-white px-6 bg-opacity-100 py-2">
+          <div className="flex items-center justify-between text-black">
+            <Link href="/" className="cursor-pointer py-1.5 lg:ml-2">
+              Logo
+            </Link>
+            <div className="hidden lg:block">
+              <NavList />
+            </div>
+            <div className="hidden gap-2 lg:flex">
+              <Button className="bg-primary text-white">Get Proposal</Button>
+            </div>
+            <IconButton
+              variant="text"
+              color="blue-gray"
+              className="lg:hidden"
+              onClick={() => setOpenNav(!openNav)}
+            >
+              {openNav ? (
+                <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+              ) : (
+                <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+              )}
+            </IconButton>
+          </div>
+          <Collapse open={openNav}>
+            <NavList />
+            <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
+              <Button className="bg-primary text-white">Get Proposal</Button>
+            </div>
+          </Collapse>
+        </Navbar>
+      </div>
+    </>
   );
 };
 

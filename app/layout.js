@@ -10,7 +10,7 @@ import "@/components/styles/layout.css";
 
 export default function RootLayout({ children }) {
   React.useEffect(() => {
-    if(typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
     window.onscroll = function () {
       myFunction();
     };
@@ -39,24 +39,7 @@ export default function RootLayout({ children }) {
 
       <ThemeProvider>
         <body>
-          <div className="flex justify-between items-center px-[2rem] py-[1rem] bg-white">
-            <div className="hidden lg:block">Revenue</div>
-            <p className="lg:hidden block">+1 (555) 555-1234</p>
-            <div className="flex justify-between items-center gap-5">
-              <div className="">
-                <Button className="bg-primary text-white lg:bg-white lg:text-black">
-                  Meet Sponsors
-                </Button>
-              </div>
-              <div className="hidden lg:block">
-                <p>+1 (555) 555-1234</p>
-              </div>
-            </div>
-          </div>
-          <div id="myHeader" className="myHeader">
-            <hr className="block lg:hidden text-black opacity-100" />
-            <Header />
-          </div>
+          <Header />
           <div className="content">{children}</div>
           <Footer />
         </body>
