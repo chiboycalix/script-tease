@@ -49,10 +49,10 @@ const GovernmentBlog = () => {
               />
               <Link href={`/blogs/${governmentBlog.slug}`}>
               <div className="mt-[1rem] cursor-pointer">
-                <p className="text-[18px] font-bold text-[#207de9]">
+                <p className="text-[18px] font-bold text-primary">
                   {governmentBlog.category}
                 </p>
-                <p className="text-[21px] font-extrabold hover:text-[#207de9] cursor-pointer mt-[0.5rem]">
+                <p className="text-[21px] font-extrabold hover:text-primary cursor-pointer mt-[0.5rem]">
                   {governmentBlog.title}
                 </p>
 

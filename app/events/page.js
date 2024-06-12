@@ -68,7 +68,7 @@ const Events = () => {
               <Image src={event.img} className="h-96"/>
             </div>
             <div>
-              <p className="text-[32px] font-black text-[#207de9] mb-[1rem]">
+              <p className="text-[32px] font-black text-primary mb-[1rem]">
                 {event.title}
               </p>
               <p className="text-[21px] font-bold text-[#000] mb-[1rem]">
@@ -76,7 +76,7 @@ const Events = () => {
               </p>
               <p className="text-[18px]">{event.subDescription}</p>
 
-              <button className="bg-[#207CE8] text-white text-[21px] font-bold w-[50%] py-[1rem] rounded cursor-pointer mt-[1rem]">
+              <button className="bg-primary text-white text-[21px] font-bold w-[50%] py-[1rem] rounded cursor-pointer mt-[1rem]">
                 Get Ticket
               </button>
             </div>

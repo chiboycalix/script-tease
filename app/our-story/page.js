@@ -16,7 +16,7 @@ const OurStory = () => {
             data-driven strategies that drive revenue, create jobs, and grow
             businesses.
           </p>
-          <button className="text-white bg-[#007BFF] px-[80px] py-[20px] rounded text-[21px] font-semibold hover:bg-blue-700 mt-[60px]">
+          <button className="text-white bg-primary px-[80px] py-[20px] rounded text-[21px] font-semibold hover:bg-opacity-50 mt-[60px]">
             Learn More
           </button>
         </div>
@@ -71,7 +71,7 @@ const OurStory = () => {
               PARTNER WITH A DEDICATED AGENCY YOU CAN TRUST
             </p>
             <p className="text-[48px] font-black leading-[56px] mt-[1rem]">
-              <span className="text-[#207de9]">Nationally-recognized</span>{" "}
+              <span className="text-primary">Nationally-recognized</span>{" "}
               awards & partnerships
             </p>
             <p className="text-[21px] w-[86%] mt-[2rem] text-[#222]">

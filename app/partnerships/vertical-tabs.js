@@ -20,7 +20,7 @@ export function VerticalTabs() {
       value: "html",
       icon: UserCircleIcon,
       desc: (
-        <div className="bg-[#00458E] w-[82%] ml-[9%] rounded-xl py-[5rem] px-[2rem]">
+        <div className="bg-primary w-[82%] ml-[9%] rounded-xl py-[5rem] px-[2rem]">
           <p className="text-center text-[24px] font-bold mb-[1.5rem]">
             Close the loop between marketing and revenue
           </p>
@@ -55,7 +55,7 @@ export function VerticalTabs() {
       value: "react",
       icon: Square3Stack3DIcon,
       desc: (
-        <div className="bg-[#00458E] w-[82%] ml-[9%] rounded-xl py-[5rem] px-[2rem]">
+        <div className="bg-primary w-[82%] ml-[9%] rounded-xl py-[5rem] px-[2rem]">
           <p className="text-center text-[24px] font-bold mb-[1.5rem]">
             Refine targeting and drive more qualified leads
           </p>
@@ -91,7 +91,7 @@ export function VerticalTabs() {
       value: "vue",
       icon: Square3Stack3DIcon,
       desc: (
-        <div className="bg-[#00458E] w-[82%] ml-[9%] rounded-xl py-[5rem] px-[2rem]">
+        <div className="bg-primary w-[82%] ml-[9%] rounded-xl py-[5rem] px-[2rem]">
           <p className="text-center text-[24px] font-bold mb-[1.5rem]">
             Improve, accelerate, and measure your web content
           </p>
@@ -124,7 +124,7 @@ export function VerticalTabs() {
       value: "angular",
       icon: Cog6ToothIcon,
       desc: (
-        <div className="bg-[#00458E] w-[82%] ml-[9%] rounded-xl py-[5rem] px-[2rem]">
+        <div className="bg-primary w-[82%] ml-[9%] rounded-xl py-[5rem] px-[2rem]">
           <p className="text-center text-[24px] font-bold mb-[1.5rem]">
             Empower your sales team to close more leads
           </p>
@@ -160,7 +160,7 @@ export function VerticalTabs() {
   return (
     <Tabs value="html" orientation="vertical">
       <TabsHeader
-        className="w-[25rem] bg-transparent cursor-pointer rounded-[26px] text-[#207de9] mr-[1rem] text-left"
+        className="w-[25rem] bg-transparent cursor-pointer rounded-[26px] text-primary mr-[1rem] text-left"
         indicatorProps={{
           className: "custom_shadow",
         }}
@@ -169,7 +169,7 @@ export function VerticalTabs() {
           <Tab
             key={value}
             value={value}
-            className="py-[2rem] text-[18px] font-bold hover:text-[#207de9] justify-start px-[20px] text-left mb-[1rem]"
+            className="py-[2rem] text-[18px] font-bold hover:text-primary justify-start px-[20px] text-left mb-[1rem]"
           >
             <div className="flex items-center gap-5">
               <div>

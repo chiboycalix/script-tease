@@ -7,7 +7,7 @@ const Universities = () => {
   return (
     <div>
       <div className="flex justify-start items-center gap-4">
-        <div className="w-[32px] h-[32px] rounded-full bg-[#207CE8]"></div>
+        <div className="w-[32px] h-[32px] rounded-full bg-primary"></div>
         <div>
           <p className="text-[32px] font-extrabold">Universities</p>
         </div>
@@ -22,8 +22,8 @@ const Universities = () => {
               className="h-[400px] rounded-t-md"
             />
             <div className="mt-[1rem] cursor-pointer p-[2rem]">
-              <p className="text-[18px] font-bold text-[#207de9]">WEB DESIGN</p>
-              <p className="text-[32px] font-extrabold hover:text-[#207de9] cursor-pointer mt-[0.5rem]">
+              <p className="text-[18px] font-bold text-primary">WEB DESIGN</p>
+              <p className="text-[32px] font-extrabold hover:text-primary cursor-pointer mt-[0.5rem]">
                 40 Simple Minimalist Web Design Examples (Inspiration)
               </p>
               <p className="text-[18px] mt-[1rem]">
@@ -44,8 +44,8 @@ const Universities = () => {
               className="h-[400px] rounded-t-md"
             />
             <div className="mt-[1rem] cursor-pointer p-[2rem]">
-              <p className="text-[18px] font-bold text-[#207de9]">WEB DESIGN</p>
-              <p className="text-[32px] font-extrabold hover:text-[#207de9] cursor-pointer mt-[0.5rem]">
+              <p className="text-[18px] font-bold text-primary">WEB DESIGN</p>
+              <p className="text-[32px] font-extrabold hover:text-primary cursor-pointer mt-[0.5rem]">
                 40 Simple Minimalist Web Design Examples (Inspiration)
               </p>
               <p className="text-[18px] mt-[1rem]">

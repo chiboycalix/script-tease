@@ -66,7 +66,7 @@ const ContactUs = () => {
               required
             />
           </div>
-          <button className="bg-[#207CE8] text-white text-[21px] font-bold w-full py-[1rem] rounded cursor-pointer">Get in touch</button>
+          <button className="bg-primary hover:bg-opacity-90 text-white text-[21px] font-bold w-full py-[1rem] rounded cursor-pointer">Get in touch</button>
         </div>
       </div>
       </div>

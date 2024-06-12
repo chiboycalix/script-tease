@@ -271,7 +271,7 @@ const HomeTabs = () => {
       <TabsHeader
         className="bg-transparent h-32 rounded"
         indicatorProps={{
-          className: "bg-[#f3fcfc] shadow-none",
+          className: "bg-primary bg-opacity-10 shadow-none",
         }}
       >
         {data.map(({ label, value }) => (

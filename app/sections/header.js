@@ -104,7 +104,7 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
   const renderItems = navListMenuItems.map(
     ({ icon, title, description, path }, key) => (
       <Link href={`/${path}`} key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg hover:bg-[#F3FCFC] hover:text-primary">
+        <MenuItem className="flex items-center gap-3 rounded-lg hover:bg-primary hover:bg-opacity-10 hover:text-primary">
           <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
             {" "}
             {React.createElement(icon, {
@@ -135,7 +135,7 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
         <MenuHandler>
           <div className="font-medium">
             <ListItem
-              className="flex items-center py-4 font-medium text-gray-900 hover:bg-[#F3FCFC] hover:text-primary"
+              className="flex items-center py-4 font-medium text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -170,17 +170,17 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
 
 const NavList = () => {
   return (
-    <List className="mt-4 mb-6 lg:mt-0 lg:mb-0 lg:flex-row lg:p-3">
+    <List className="mt-4 mb-6 lg:mt-0 lg:mb-0 lg:flex-row lg:p-3 items-center">
       <NavListMenu navListMenuItems={aboutUs} menuTitle={"About Us"} />
       <NavListMenu navListMenuItems={community} menuTitle={"Community"} />
       <NavListMenu navListMenuItems={partners} menuTitle={"Partners"} />
       <Link href="/faqs">
-        <ListItem className="flex items-center gap-2 py-2 pr-4 mt-2 text-gray-900 hover:bg-[#F3FCFC] hover:text-primary">
+        <ListItem className="ml-2 flex items-center justify-center py-4 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary">
           Faqs
         </ListItem>
       </Link>
       <Link href="/contact-us">
-        <ListItem className="flex items-center gap-2 py-2 pr-4 mt-2 text-gray-900 hover:bg-[#F3FCFC] hover:text-primary">
+        <ListItem className="ml-2 flex items-center justify-center py-4 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary">
           Contact us
         </ListItem>
       </Link>
