@@ -6,10 +6,15 @@ import HomeCarousel from "@/app/sections/carousel";
 import HomePageBlogs from "@/app/sections/homePageBlogs";
 import HomePageEvents from "@/app/sections/homePageEvents";
 import Faqs from "@/app/sections/faqs";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export default function Home() {
   const router = useRouter();
 
+  useGSAP(() => {
+    gsap.to(".search-text", {opacity: 1})
+  }, [])
   return (
     <main>
       <HomeCarousel />
@@ -59,7 +64,7 @@ export default function Home() {
       </div>
       <div className="px-[1.5rem] xl:px-[5rem] py-[5rem] bg-white">
         <div className="flex flex-col items-center mb-[3rem]">
-          <p className="text-[36px] lg:text-[56px] xl:text-[72px] font-black text-[#0B1720] tracking-tighter leading-[78px]">
+          <p className="text-[36px] lg:text-[56px] xl:text-[72px] font-black text-[#0B1720] tracking-tighter leading-[78px] opacity-0 search-text">
             Your search ends here.
           </p>
           <p className="text-[24px] lg:text-[28px] xl:text-[32px] text-center font-semibold leading-10">

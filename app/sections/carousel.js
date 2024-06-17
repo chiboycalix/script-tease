@@ -1,9 +1,8 @@
 "use client";
-import { Carousel, IconButton } from "@/components/material/MTailwind";
+import { Carousel } from "@/components/material/MTailwind";
 import { Button } from "@/components/ui/button";
 import { Blog } from "@/components/material/Blog.jsx";
 import { useRouter } from "next/navigation";
-import Autoplay from "embla-carousel-autoplay";
 
 const HomeCarousel = () => {
   const router = useRouter();

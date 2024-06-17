@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import { ThemeProvider } from "@/components/material/MTailwind";
 import { Button } from "@/components/ui/button";
@@ -9,7 +9,14 @@ import "@/app/globals.css";
 import "@/components/styles/layout.css";
 
 export default function RootLayout({ children }) {
-  React.useEffect(() => {
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
+
+  useEffect(() => {
     if (typeof window === "undefined") return;
     window.onscroll = function () {
       myFunction();
