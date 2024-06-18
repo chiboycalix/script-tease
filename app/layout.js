@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
 import { ThemeProvider } from "@/components/material/MTailwind";
-import { Button } from "@/components/ui/button";
 import Header from "@/app/sections/header";
 import Footer from "@/app/sections/footer";
 import "@/app/globals.css";

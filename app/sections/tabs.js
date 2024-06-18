@@ -8,6 +8,19 @@ import {
   TabPanel,
 } from "../../components/material/MTailwind";
 
+const DescriptionWrapper = ({ children }) => {
+  return (
+    <div className="w-full grid gap-5 lg:grid-cols-2 grid-cols-1">
+      {children}
+    </div>
+  );
+};
+const DescriptionContent = ({ children }) => {
+  return (
+    <div className="basis-1/2 p-[1rem] rounded-xl border-[1px] border-black border-opacity-40">{children}</div>
+  );
+};
+
 const HomeTabs = () => {
   const [activeTab, setActiveTab] = React.useState("University");
   const data = [
@@ -15,8 +28,8 @@ const HomeTabs = () => {
       label: "University",
       value: "University",
       desc: (
-        <div className="grid gap-5 lg:grid-cols-2 grid-cols-1">
-          <div className="basis-1/2 p-[2rem] rounded-xl border">
+        <DescriptionWrapper>
+          <DescriptionContent>
             <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
               {" "}
               By partnering with us, your university will gain access to
@@ -47,8 +60,8 @@ const HomeTabs = () => {
               Access cutting-edge resources and tools that foster innovative
               teaching methods.
             </p>
-          </div>
-          <div className="flex-1 p-[2rem] rounded-xl border">
+          </DescriptionContent>
+          <DescriptionContent>
             <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
               <span className="text-primary font-extrabold">
                 Reputation Building:{" "}
@@ -84,16 +97,16 @@ const HomeTabs = () => {
               Play a pivotal role in driving societal progress by preparing the
               next generation of leaders and innovators.
             </p>
-          </div>
-        </div>
+          </DescriptionContent>
+        </DescriptionWrapper>
       ),
     },
     {
       label: "Organisation",
       value: "organisation",
       desc: (
-        <div className="grid gap-5 lg:grid-cols-2 grid-cols-1">
-          <div className="basis-1/2 rounded-xl p-[2rem] border">
+        <DescriptionWrapper>
+          <DescriptionContent>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
               {" "}
               Collaborate with top universities and government bodies to solve
@@ -124,8 +137,8 @@ const HomeTabs = () => {
               Partner with universities and government agencies on research and
               development initiatives.
             </p>
-          </div>
-          <div className="flex-1 p-[2rem] rounded-xl border">
+          </DescriptionContent>
+          <DescriptionContent>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
               <span className="text-primary font-extrabold">
                 Cost-Effective Solutions:{" "}
@@ -156,16 +169,16 @@ const HomeTabs = () => {
               Stay updated with the latest academic and industry trends through
               ongoing collaborations and interactions.
             </p>
-          </div>
-        </div>
+          </DescriptionContent>
+        </DescriptionWrapper>
       ),
     },
     {
       label: "Student",
       value: "student",
       desc: (
-        <div className="grid gap-5 lg:grid-cols-2 grid-cols-1">
-          <div className="basis-1/2 p-[3rem] rounded-xl border">
+        <DescriptionWrapper>
+          <DescriptionContent>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
               As a partner, you’ll collaborate on impactful projects, enhance
               your skills, and build a professional network that sets you apart
@@ -190,8 +203,8 @@ const HomeTabs = () => {
               sought after by employers. Professional Networking: Build
               connections with industry professionals, companies, universities,
             </p>
-          </div>
-          <div className="flex-1 p-[2rem] rounded-xl border">
+          </DescriptionContent>
+          <DescriptionContent>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
               and government agencies.
             </p>
@@ -224,8 +237,8 @@ const HomeTabs = () => {
               Personal Growth: Enhance your problem-solving, teamwork, and
               leadership abilities.
             </p>
-          </div>
-        </div>
+          </DescriptionContent>
+        </DescriptionWrapper>
       ),
     },
   ];
@@ -237,7 +250,6 @@ const HomeTabs = () => {
         indicatorProps={{
           className: "bg-primary bg-opacity-10 shadow-none",
         }}
-      
       >
         {data.map(({ label, value }) => (
           <Tab
@@ -261,7 +273,7 @@ const HomeTabs = () => {
         }}
       >
         {data.map(({ value, desc }) => (
-          <TabPanel key={value} value={value}>
+          <TabPanel key={value} value={value} className="p-2">
             {desc}
           </TabPanel>
         ))}

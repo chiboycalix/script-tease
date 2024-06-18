@@ -1,5 +1,6 @@
 "use client";
 import { Carousel } from "@/components/material/MTailwind";
+import Button from "@/components/Button";
 
 const CarouselWrapper = ({ children }) => {
   return (
@@ -27,10 +28,8 @@ const CarouselLeft = ({ title, description, buttonCaption }) => {
       <p className="w-[90%] text-[1.3rem] opacity-55 mt-3 text-center lg:text-left">
         {description}
       </p>
-      <div className="w-full flex mt-[2rem] justify-center lg:justify-start">
-        <button className="bg-primary hover:bg-opacity-90 text-white text-[20px] w-full md:w-[50%] py-[1rem] rounded-md cursor-pointer">
-          {buttonCaption}
-        </button>
+      <div className="w-[100%] ml-[0%] sm:w-[50%] sm:ml-[25%] md:w-[60%] md:ml-[20%] lg:ml-[0%] flex mt-[2rem] items-center justify-center lg:justify-start">
+        <Button caption={buttonCaption} />
       </div>
     </div>
   );

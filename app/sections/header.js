@@ -30,9 +30,9 @@ import {
   ArrowRightIcon,
 } from "@heroicons/react/24/solid";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import Button from "@/components/Button";
 import "@/components/styles/header.css";
-
+import useWindowWidth from "@/hooks/useWindowWidth";
 
 const aboutUs = [
   {
@@ -117,8 +117,12 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const renderItems = navListMenuItems.map(
-    ({ icon, title, description, path }, key) => (
-      <Link href={`/${path}`} key={key} className="bg-white rounded-md dropdown-link">
+    ({ icon, title, path }, key) => (
+      <Link
+        href={`/${path}`}
+        key={key}
+        className="bg-white rounded-md dropdown-link"
+      >
         <MenuItem className="flex items-center gap-3 text-black font-medium hover:bg-white hover:bg-opacity-10 hover:text-primary">
           <div className="flex items-center justify-center p-2 ">
             {" "}
@@ -135,9 +139,6 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
                 className: "h-4 text-primary font-black w-6 right-arrow",
               })}
             </p>
-            {/* <p className="text-xs !font-medium text-blue-gray-500">
-              {description}
-            </p> */}
           </div>
         </MenuItem>
       </Link>
@@ -193,17 +194,17 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
 
 const NavList = () => {
   return (
-    <List className="mt-4 mb-6 lg:mt-0 lg:mb-0 lg:flex-row lg:p-3 items-center font-inter">
+    <List className="mt-4 mb-6 lg:mt-0 lg:mb-0 lg:flex-row lg:p-3 items-left font-inter">
       <NavListMenu navListMenuItems={aboutUs} menuTitle={"About Us"} />
       <NavListMenu navListMenuItems={community} menuTitle={"Community"} />
       <NavListMenu navListMenuItems={partners} menuTitle={"Partners"} />
       <Link href="/faqs">
-        <ListItem className="ml-2 flex items-center justify-center py-4 text-black font-medium hover:bg-primary hover:bg-opacity-10 hover:text-primary">
+        <ListItem className="ml-2 flex items-center justify-start py-4 text-black font-medium hover:bg-primary hover:bg-opacity-10 hover:text-primary">
           Faqs
         </ListItem>
       </Link>
       <Link href="/contact-us">
-        <ListItem className="ml-2 flex items-center justify-center py-4 text-black font-medium hover:bg-primary hover:bg-opacity-10 hover:text-primary">
+        <ListItem className="ml-2 flex items-center justify-start py-4 text-black font-medium hover:bg-primary hover:bg-opacity-10 hover:text-primary">
           Contact us
         </ListItem>
       </Link>
@@ -212,6 +213,7 @@ const NavList = () => {
 };
 
 const Header = () => {
+  const windowWidth = useWindowWidth();
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -223,14 +225,20 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center px-[2rem] py-[1rem] bg-white">
+      <div className="flex justify-between items-center px-[1rem] py-[1rem] bg-white">
         <div className="hidden lg:block">Revenue</div>
         <p className="lg:hidden block">+1 (555) 555-1234</p>
         <div className="flex justify-between items-center gap-5">
           <div className="">
-            <Button className="bg-primary text-white lg:bg-white lg:text-black">
-              Meet Sponsors
-            </Button>
+            {windowWidth <= 1024 ? (
+              <Button caption="Meet Sponsors" variant="primary" size="small" />
+            ) : (
+              <Button
+                caption="Meet Sponsors"
+                variant="secondary"
+                size="small"
+              />
+            )}
           </div>
           <div className="hidden lg:block">
             <p>+1 (555) 555-1234</p>
@@ -239,7 +247,7 @@ const Header = () => {
       </div>
       <div id="myHeader" className="myHeader">
         <hr className="block lg:hidden text-black opacity-100 border-none h-[1px] bg-black bg-opacity-30" />
-        <Navbar className="w-full max-w-screen-3xl rounded-none bg-white px-6 bg-opacity-100 py-2">
+        <Navbar className="w-full max-w-screen-3xl rounded-none bg-white px-[1rem] bg-opacity-100 py-2">
           <div className="flex items-center justify-between text-black">
             <Link href="/" className="cursor-pointer py-1.5 lg:ml-2">
               Logo
@@ -248,7 +256,7 @@ const Header = () => {
               <NavList />
             </div>
             <div className="hidden gap-2 lg:flex">
-              <Button className="bg-primary text-white">Get Proposal</Button>
+              <Button caption="Get Proposal" size="large"/>
             </div>
             <IconButton
               variant="text"
@@ -266,7 +274,7 @@ const Header = () => {
           <Collapse open={openNav}>
             <NavList />
             <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-              <Button className="bg-primary text-white">Get Proposal</Button>
+              <Button caption="Get Proposal" size="large" />
             </div>
           </Collapse>
         </Navbar>
