@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useRouter } from "next/navigation";
 import Partners from "@/app/sections/partners";
 import HomeTabs from "@/app/sections/tabs";
@@ -13,13 +13,13 @@ export default function Home() {
   const router = useRouter();
 
   useGSAP(() => {
-    gsap.to(".search-text", {opacity: 1})
-  }, [])
+    gsap.to(".search-text", { opacity: 1 });
+  }, []);
   return (
     <main>
       <HomeCarousel />
       <div className="bg-white">
-        <div className="px-[1.5rem] xl:px-[5rem] py-[2rem] bg-primary bg-opacity-30 flex text-black mt-[5rem] gap-4">
+        <div className="px-[1.5rem] xl:px-[5rem] py-[2rem] bg-primary bg-opacity-30 flex text-black gap-4">
           <div className="md:basis-[20%]">
             <p className="">1,200 + Real Results:</p>
           </div>
@@ -49,6 +49,7 @@ export default function Home() {
             </div>
           </marquee>
         </div>
+
         <div className="px-[5rem] py-[5rem]">
           <div className="flex flex-col items-center mb-[3rem]">
             <p className="text-[36px] lg:text-[56px] xl:text-[72px] font-black text-[#0B1720] tracking-tighter leading-[78px]">
@@ -96,8 +97,12 @@ export default function Home() {
         </div>
         <Faqs />
         <div className="mt-[5rem] w-[20%] ml-[40%]">
-
-        <button className="bg-primary hover:bg-opacity-90 text-white text-[21px] font-bold w-full py-[1rem] rounded cursor-pointer" onClick={() => router.push("/faqs", {scroll: false})}>More FAQs</button>
+          <button
+            className="bg-primary hover:bg-opacity-90 text-white text-[21px] font-bold w-full py-[1rem] rounded cursor-pointer"
+            onClick={() => router.push("/faqs", { scroll: false })}
+          >
+            More FAQs
+          </button>
         </div>
       </div>
       <div className="px-[1.5rem] xl:px-[5rem] py-[5rem] bg-white">

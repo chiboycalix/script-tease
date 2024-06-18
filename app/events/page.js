@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
-import './events.css';
+import "./events.css";
 
 export const projects = [
   {
@@ -15,7 +15,7 @@ export const projects = [
     link: "",
     backgroundColor: "#4CC0B9",
     // backgroundColor: "#000000",
-    textColor: "#FFFFFF"
+    textColor: "#FFFFFF",
   },
   {
     title: "Montreal Onboarding Fair",
@@ -25,7 +25,7 @@ export const projects = [
     link: "",
     backgroundColor: "#24B06C",
     // backgroundColor: "#2a2a2a",
-    textColor: "#FFFFFF"
+    textColor: "#FFFFFF",
   },
   {
     title: "Montreal Onboarding Fair",
@@ -35,7 +35,7 @@ export const projects = [
     link: "",
     backgroundColor: "#98CC63",
     // backgroundColor: "#555555",
-    textColor: "#FFFFFF"
+    textColor: "#FFFFFF",
   },
   {
     title: "Montreal Onboarding Fair",
@@ -45,7 +45,7 @@ export const projects = [
     link: "",
     backgroundColor: "#FED02C",
     // backgroundColor: "#808080",
-    textColor: "#FFFFFF"
+    textColor: "#FFFFFF",
   },
   {
     title: "Montreal Onboarding Fair",
@@ -55,7 +55,7 @@ export const projects = [
     link: "",
     backgroundColor: "#F6941C",
     // backgroundColor: "#aaaaaa",
-    textColor: "#FFFFFF"
+    textColor: "#FFFFFF",
   },
   {
     title: "Montreal Onboarding Fair",
@@ -65,7 +65,7 @@ export const projects = [
     link: "",
     backgroundColor: "#91268E",
     // backgroundColor: "#d5d5d5",
-    textColor: "#FFFFFF"
+    textColor: "#FFFFFF",
   },
 ];
 
@@ -74,12 +74,11 @@ const EventCard = ({
   title,
   description,
   src,
-  url,
   backgroundColor,
   progress,
   range,
   targetScale,
-  textColor
+  textColor,
 }) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -103,7 +102,7 @@ const EventCard = ({
       >
         <h2 className="text-[40px] font-black">{title}</h2>
         <div className="body">
-        <div className="imageContainer">
+          <div className="imageContainer">
             <motion.div className="inner" style={{ scale: imageScale }}>
               <Image fill src={src} alt="image" />
             </motion.div>
@@ -111,14 +110,17 @@ const EventCard = ({
 
           <div className="description">
             <p className="mb-[2rem]">{description}</p>
-            <button className={`bg-white hover:bg-opacity-90 text-[${backgroundColor}] text-[20px] font-black w-[50%] py-[1rem] rounded-md cursor-pointer`}>GET TICKET</button>
+            <button
+              className={`bg-white hover:bg-opacity-90 text-[${backgroundColor}] text-[20px] font-black w-[50%] py-[1rem] rounded-md cursor-pointer`}
+            >
+              GET TICKET
+            </button>
           </div>
         </div>
       </motion.div>
     </div>
   );
 };
-
 
 const Events = () => {
   const container = useRef(null);
@@ -129,20 +131,16 @@ const Events = () => {
 
   useEffect(() => {
     const lenis = new Lenis();
-
     function raf(time) {
-      lenis.raf(time);
+      lenis.raf(time)
       requestAnimationFrame(raf);
     }
 
     requestAnimationFrame(raf);
-  });
+  }, []);
 
   return (
-    <div
-      className="w-full pt-[3rem] px-[5rem] relative"
-      ref={container}
-    >
+    <div className="w-full pt-[3rem] px-[5rem]" ref={container}>
       <p className="text-[48px] font-black">Events</p>
       {projects.map((project, i) => {
         const targetScale = 1 - (project.length - i) * 0.05;

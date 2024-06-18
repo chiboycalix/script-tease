@@ -27,15 +27,16 @@ module.exports = withMT({
       "3xl": "1536px",
     },
     colors: {
-      primary: '#217CE8',
+      // primary: '#217CE8',
       // primary: '#5c6ac4',
       // primary: '#3C6E71',
       // primary: '#1C467A',
       // primary:'#F1BA0A',
       // primary:'#EB5E28',
-      secondary: '#D9D9D9',
-      white: '#ffffff',
-      black:'#000000'
+      primary: "#0353A4",
+      secondary: "#D9D9D9",
+      white: "#ffffff",
+      black: "#000000",
     },
     container: {
       center: true,
@@ -46,6 +47,11 @@ module.exports = withMT({
     },
     extend: {
       keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -54,22 +60,21 @@ module.exports = withMT({
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
-      },
-      keyframes: {
-        scroll: {
-          to: {
-            transform: "translate(calc(-50% - 0.5rem))",
-          },
-        },
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
       },
     },
   },
-  plugins: [require("tailwindcss-animate"),addVariablesForColors],
+  plugins: [require("tailwindcss-animate"), addVariablesForColors],
 });
 
 function addVariablesForColors({ addBase, theme }) {
@@ -77,7 +82,7 @@ function addVariablesForColors({ addBase, theme }) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });
