@@ -1,0 +1,22 @@
+.dropdown-link:hover .right-arrow{
+  opacity: 1;
+  animation-name: easeIn;
+  animation-duration: 0.5s;
+} 
+.right-arrow{
+  opacity: 0;
+}
+.menu-list{
+  animation-name: easeIn;
+  animation-duration: 0.5s;
+}
+@keyframes easeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

@@ -71,7 +71,7 @@ const HomeCarousel = () => {
       autoplay={true}
       loop={true}
       transition={{ duration: 1, type: "spring" }}
-      className="py-[3rem]"
+      className="py-[3rem] bg-primary bg-opacity-5"
       prevArrow={({ handlePrev }) => (
         <div className="hidden"></div>
       )}

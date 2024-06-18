@@ -16,6 +16,9 @@ module.exports = withMT({
   ],
   prefix: "",
   theme: {
+    fontFamily: {
+      'inter': ['Inter'],
+    },
     screens: {
       xxs: "275px",
       xs: "375px",
@@ -27,13 +30,13 @@ module.exports = withMT({
       "3xl": "1536px",
     },
     colors: {
-      // primary: '#217CE8',
+      primary: '#217CE8',
       // primary: '#5c6ac4',
       // primary: '#3C6E71',
       // primary: '#1C467A',
       // primary:'#F1BA0A',
       // primary:'#EB5E28',
-      primary: "#0353A4",
+      // primary: "#0353A4",
       secondary: "#D9D9D9",
       white: "#ffffff",
       black: "#000000",

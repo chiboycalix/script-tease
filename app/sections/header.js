@@ -27,9 +27,12 @@ import {
   SunIcon,
   TagIcon,
   UserGroupIcon,
+  ArrowRightIcon,
 } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import "@/components/styles/header.css";
+
 
 const aboutUs = [
   {
@@ -50,14 +53,14 @@ const aboutUs = [
     icon: PhoneIcon,
     path: "contact-us",
   },
-];
-const community = [
   {
     title: "Blog",
     description: "Find the perfect solution for your needs.",
     icon: Bars4Icon,
     path: "blogs",
   },
+];
+const community = [
   {
     title: "Partnership",
     description: "Reach out to us for assistance or inquiries",
@@ -76,6 +79,12 @@ const community = [
     icon: TagIcon,
     path: "programs",
   },
+  {
+    title: "Blog",
+    description: "Find the perfect solution for your needs.",
+    icon: Bars4Icon,
+    path: "blogs",
+  },
 ];
 const partners = [
   {
@@ -83,6 +92,12 @@ const partners = [
     description: "Find the perfect solution for your needs.",
     icon: SquaresPlusIcon,
     path: "our-story",
+  },
+  {
+    title: "Programs",
+    description: "Explore limited-time deals and bundles",
+    icon: TagIcon,
+    path: "programs",
   },
   {
     title: "About Us",
@@ -103,20 +118,26 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const renderItems = navListMenuItems.map(
     ({ icon, title, description, path }, key) => (
-      <Link href={`/${path}`} key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg hover:bg-primary hover:bg-opacity-10 hover:text-primary">
-          <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
+      <Link href={`/${path}`} key={key} className="bg-white rounded-md dropdown-link">
+        <MenuItem className="flex items-center gap-3 text-black font-medium hover:bg-white hover:bg-opacity-10 hover:text-primary">
+          <div className="flex items-center justify-center p-2 ">
             {" "}
             {React.createElement(icon, {
               strokeWidth: 2,
-              className: "h-6 text-gray-900 w-6",
+              className: "h-6 text-primary font-black w-6",
             })}
           </div>
-          <div>
-            <p className="flex items-center text-sm font-bold">{title}</p>
-            <p className="text-xs !font-medium text-blue-gray-500">
-              {description}
+          <div className="">
+            <p className="flex items-center text-[16px]">
+              {title}{" "}
+              {React.createElement(ArrowRightIcon, {
+                strokeWidth: 10,
+                className: "h-4 text-primary font-black w-6 right-arrow",
+              })}
             </p>
+            {/* <p className="text-xs !font-medium text-blue-gray-500">
+              {description}
+            </p> */}
           </div>
         </MenuItem>
       </Link>
@@ -135,7 +156,7 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
         <MenuHandler>
           <div className="font-medium">
             <ListItem
-              className="flex items-center py-4 font-medium text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary"
+              className="flex items-center py-4 font-medium text-black hover:bg-primary hover:bg-opacity-10 hover:text-primary"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -155,8 +176,10 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
             </ListItem>
           </div>
         </MenuHandler>
-        <MenuList className="hidden rounded-xl lg:block ">
-          <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0">
+        <MenuList className="hidden rounded-xl lg:block bg-transparent border-none w-full mt-[2rem] shadow-none menu-list">
+          <ul
+            className={`grid grid-cols-${navListMenuItems.length} gap-[2rem] outline-none outline-0 font-inter`}
+          >
             {renderItems}
           </ul>
         </MenuList>
@@ -170,17 +193,17 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
 
 const NavList = () => {
   return (
-    <List className="mt-4 mb-6 lg:mt-0 lg:mb-0 lg:flex-row lg:p-3 items-center">
+    <List className="mt-4 mb-6 lg:mt-0 lg:mb-0 lg:flex-row lg:p-3 items-center font-inter">
       <NavListMenu navListMenuItems={aboutUs} menuTitle={"About Us"} />
       <NavListMenu navListMenuItems={community} menuTitle={"Community"} />
       <NavListMenu navListMenuItems={partners} menuTitle={"Partners"} />
       <Link href="/faqs">
-        <ListItem className="ml-2 flex items-center justify-center py-4 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary">
+        <ListItem className="ml-2 flex items-center justify-center py-4 text-black font-medium hover:bg-primary hover:bg-opacity-10 hover:text-primary">
           Faqs
         </ListItem>
       </Link>
       <Link href="/contact-us">
-        <ListItem className="ml-2 flex items-center justify-center py-4 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary">
+        <ListItem className="ml-2 flex items-center justify-center py-4 text-black font-medium hover:bg-primary hover:bg-opacity-10 hover:text-primary">
           Contact us
         </ListItem>
       </Link>
@@ -214,7 +237,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div id="myHeader" className="myHeader drop-shadow-md">
+      <div id="myHeader" className="myHeader">
         <hr className="block lg:hidden text-black opacity-100" />
         <Navbar className="w-full max-w-screen-3xl rounded-none bg-white px-6 bg-opacity-100 py-2">
           <div className="flex items-center justify-between text-black">
