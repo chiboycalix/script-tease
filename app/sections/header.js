@@ -238,7 +238,7 @@ const Header = () => {
         </div>
       </div>
       <div id="myHeader" className="myHeader">
-        <hr className="block lg:hidden text-black opacity-100" />
+        <hr className="block lg:hidden text-black opacity-100 border-none h-[1px] bg-black bg-opacity-30" />
         <Navbar className="w-full max-w-screen-3xl rounded-none bg-white px-6 bg-opacity-100 py-2">
           <div className="flex items-center justify-between text-black">
             <Link href="/" className="cursor-pointer py-1.5 lg:ml-2">
