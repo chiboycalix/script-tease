@@ -16,7 +16,8 @@ const CarouselLeft = ({ title, description, buttonCaption }) => {
   return (
     <div className="h-full basis-1/2">
       <h1
-        className="w-[100%] text-[36px] font-black text-center
+        className="w-[100%] text-[30px] font-black text-center
+        md:text-[36px]
         lg:text-[56px] lg:text-left
         xl:text-[72px] xl:leading-[78px]
       "

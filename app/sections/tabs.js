@@ -16,13 +16,7 @@ const HomeTabs = () => {
       value: "University",
       desc: (
         <div className="grid gap-5 lg:grid-cols-2 grid-cols-1">
-          <div
-            className="basis-1/2 p-[2rem] rounded-xl"
-            style={{
-              boxShadow:
-                "rgba(0, 0, 0, 0.15) 0px 3px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px",
-            }}
-          >
+          <div className="basis-1/2 p-[2rem] rounded-xl border">
             <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
               {" "}
               By partnering with us, your university will gain access to
@@ -54,13 +48,7 @@ const HomeTabs = () => {
               teaching methods.
             </p>
           </div>
-          <div
-            className="flex-1 p-[2rem] rounded-xl"
-            style={{
-              boxShadow:
-                "rgba(0, 0, 0, 0.15) 0px 3px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px",
-            }}
-          >
+          <div className="flex-1 p-[2rem] rounded-xl border">
             <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
               <span className="text-primary font-extrabold">
                 Reputation Building:{" "}
@@ -105,13 +93,7 @@ const HomeTabs = () => {
       value: "organisation",
       desc: (
         <div className="grid gap-5 lg:grid-cols-2 grid-cols-1">
-          <div
-            className="basis-1/2 rounded-xl p-[2rem]"
-            style={{
-              boxShadow:
-                "rgba(0, 0, 0, 0.15) 0px 3px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px",
-            }}
-          >
+          <div className="basis-1/2 rounded-xl p-[2rem] border">
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
               {" "}
               Collaborate with top universities and government bodies to solve
@@ -143,13 +125,7 @@ const HomeTabs = () => {
               development initiatives.
             </p>
           </div>
-          <div
-            style={{
-              boxShadow:
-                "rgba(0, 0, 0, 0.15) 0px 3px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px",
-            }}
-            className="flex-1 p-[2rem] rounded-xl"
-          >
+          <div className="flex-1 p-[2rem] rounded-xl border">
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
               <span className="text-primary font-extrabold">
                 Cost-Effective Solutions:{" "}
@@ -189,13 +165,7 @@ const HomeTabs = () => {
       value: "student",
       desc: (
         <div className="grid gap-5 lg:grid-cols-2 grid-cols-1">
-          <div
-            className="basis-1/2 p-[3rem] rounded-xl"
-            style={{
-              boxShadow:
-                "rgba(0, 0, 0, 0.15) 0px 3px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px",
-            }}
-          >
+          <div className="basis-1/2 p-[3rem] rounded-xl border">
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
               As a partner, you’ll collaborate on impactful projects, enhance
               your skills, and build a professional network that sets you apart
@@ -221,13 +191,7 @@ const HomeTabs = () => {
               connections with industry professionals, companies, universities,
             </p>
           </div>
-          <div
-            style={{
-              boxShadow:
-                "rgba(0, 0, 0, 0.15) 0px 3px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px",
-            }}
-            className="flex-1 p-[2rem] rounded-xl"
-          >
+          <div className="flex-1 p-[2rem] rounded-xl border">
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
               and government agencies.
             </p>
@@ -267,19 +231,20 @@ const HomeTabs = () => {
   ];
 
   return (
-    <Tabs value={activeTab}>
+    <Tabs value={activeTab} orientation="horizontal">
       <TabsHeader
-        className="bg-transparent h-32 rounded"
+        className="bg-transparent h-[300px] rounded flex flex-col sm:flex-row sm:h-[128px]"
         indicatorProps={{
           className: "bg-primary bg-opacity-10 shadow-none",
         }}
+      
       >
         {data.map(({ label, value }) => (
           <Tab
             key={value}
             value={value}
             onClick={() => setActiveTab(value)}
-            className={`font-black text-[18px] xl:text-[24px] ${
+            className={`font-black text-[24px] lg:text-[28px] ${
               activeTab === value ? "text-primary" : ""
             }`}
           >
