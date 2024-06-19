@@ -38,7 +38,7 @@ const universitiesBlogs = [
 ];
 const UniversitiesBlog = () => {
   return (
-    <div className="grid grid-cols-4 gap-10 mt-[2rem]">
+    <div className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10 mt-[2rem]">
       {universitiesBlogs.map((universitiesBlog) => {
         return (
           <div className="rounded-md" key={universitiesBlog.id}>

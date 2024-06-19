@@ -15,7 +15,7 @@ const GovernmentOrganisation = () => {
       </div>
     </div>
 
-    <div className="grid grid-cols-2 gap-6">
+    <div className="grid xl:grid-cols-2 grid-cols-1 gap-6">
       <GovernmentBlog />
       <div className="rounded-md bg-[#EFF6FE]">
         <Image

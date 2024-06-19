@@ -38,7 +38,7 @@ const governmentBlogs = [
 ];
 const GovernmentBlog = () => {
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
       {governmentBlogs.map((governmentBlog) => {
         return (
           <div className="rounded-md" key={governmentBlog.id}>

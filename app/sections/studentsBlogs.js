@@ -40,7 +40,7 @@ const StudentBlogs = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-10 mt-[2rem]">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 mt-[2rem]">
         {studentsBlogs.map((studentsBlog) => {
           return (
             <div className="rounded-md" key={studentsBlog.id}>

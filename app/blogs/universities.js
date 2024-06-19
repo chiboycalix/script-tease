@@ -14,7 +14,7 @@ const Universities = () => {
       </div>
       <div>
         <UniversitiesBlog />
-        <div className="grid grid-cols-2 gap-10 mt-[5rem]">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 mt-[5rem]">
           <div className="rounded-md bg-[#EFF6FE]">
             <Image
               src={BlogOne}
