@@ -1,6 +1,3 @@
 .values:last-child {
   margin-bottom: 15rem;
 }
-.values:nth-child(1) {
-  display: none;
-}
