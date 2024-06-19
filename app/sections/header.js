@@ -206,6 +206,11 @@ const NavList = () => {
           Contact us
         </ListItem>
       </Link>
+      {/* <Link href="/sample">
+        <ListItem className="lg:ml-2 ml-0 flex items-center justify-start py-4 text-black font-medium hover:bg-primary hover:bg-opacity-10 hover:text-primary">
+          Sample
+        </ListItem>
+      </Link> */}
     </List>
   );
 };

@@ -6,8 +6,6 @@ import HomeCarousel from "@/app/sections/carousel";
 import HomePageBlogs from "@/app/sections/homePageBlogs";
 import HomePageEvents from "@/app/sections/homePageEvents";
 import Faqs from "@/app/sections/faqs";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import HorizontalScroll from "./sections/horizontalScroll";
 import Button from "@/components/Button";
 import Title from "@/components/Title";
@@ -15,7 +13,7 @@ import Title from "@/components/Title";
 const SectionHeader = ({ title, subTitle }) => {
   return (
     <div className="flex flex-col items-center mb-[3rem]">
-     <Title title={title}/>
+      <Title title={title} />
       <p className="text-[24px] lg:text-[28px] xl:text-[32px] text-center font-semibold leading-10">
         {subTitle}
       </p>
@@ -31,10 +29,6 @@ const SectionWrapper = ({ children }) => {
 };
 export default function Home() {
   const router = useRouter();
-
-  useGSAP(() => {
-    gsap.to(".search-text", { opacity: 1 });
-  }, []);
 
   return (
     <main>

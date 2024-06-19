@@ -17,7 +17,7 @@ module.exports = withMT({
   prefix: "",
   theme: {
     fontFamily: {
-      'inter': ['Inter'],
+      inter: ["Inter"],
     },
     screens: {
       xxs: "275px",

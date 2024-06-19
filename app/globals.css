@@ -10,3 +10,17 @@ body {
   font-style: normal;
   font-variation-settings:"slnt" 0;
 }
+/* Add this to your styles/globals.css or create a custom CSS file */
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+/* Optional: Pause on hover */
+.hover\:pause-scroll:hover {
+  animation-play-state: paused;
+}
