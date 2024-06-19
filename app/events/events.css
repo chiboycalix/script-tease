@@ -14,18 +14,17 @@
   height: 500px;
   width: 1440px;
   border-radius: 25px;
-  padding: 50px;
+  padding: 20px;
   transform-origin: top;
 }
 .cardContainer .card .body {
   display: flex;
   height: 100%;
-  margin-top: 50px;
   gap: 50px;
 }
 .cardContainer .card .body .imageContainer {
   position: relative;
-  flex-basis: 60%;
+  flex-basis: 30%;
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
@@ -41,5 +40,39 @@
   height: 100%;
 }
 .cardContainer .card .body .imageContainer .inner img {
-  object-fit: cover;
+  object-fit: fill;
+}
+
+@media only screen and (max-width: 1440px) {
+  .cardContainer .card {
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .cardContainer .card .body .imageContainer {
+   flex-basis: 40%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .cardContainer .card .body {
+    gap: 20px;
+  }
+  .cardContainer .card .body .imageContainer {
+    flex-basis: 50%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .cardContainer .card {
+    height: 800px;
+    padding: 40px;
+  }
+  .cardContainer .card .body {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .cardContainer .card {
+    padding: 20px;
+  }
 }

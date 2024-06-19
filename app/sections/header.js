@@ -32,7 +32,7 @@ import {
 import Link from "next/link";
 import Button from "@/components/Button";
 import "@/components/styles/header.css";
-import useWindowWidth from "@/hooks/useWindowWidth";
+import { useWindowSize } from "@uidotdev/usehooks";
 
 const aboutUs = [
   {
@@ -213,7 +213,7 @@ const NavList = () => {
 };
 
 const Header = () => {
-  const windowWidth = useWindowWidth();
+  const {width} = useWindowSize();
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -230,7 +230,7 @@ const Header = () => {
         <p className="lg:hidden block">+1 (555) 555-1234</p>
         <div className="flex justify-between items-center gap-5">
           <div className="">
-            {windowWidth <= 1024 ? (
+            {width <= 1024 ? (
               <Button caption="Meet Sponsors" variant="primary" size="small" />
             ) : (
               <Button
