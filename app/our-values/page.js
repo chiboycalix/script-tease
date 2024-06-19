@@ -1,7 +1,7 @@
 import { Boxes } from "@/components/ui/background-boxes";
 import { cn } from "@/lib/utils";
 import React from "react";
-import './values.css';
+import "./values.css";
 
 const fertile = [
   {
@@ -166,7 +166,7 @@ const OurValues = () => {
         </div>
       </div>
 
-      <Alphabets
+      {/* <Alphabets
         letter="F"
         paragraph="We treat fellow FXers like family & empower them to achieve their"
         span="Personal best."
@@ -208,7 +208,7 @@ const OurValues = () => {
         paragraph="We treat fellow FXers like family & empower them to achieve their"
         span="Personal best."
         id={7}
-      />
+      /> */}
     </div>
   );
 };
