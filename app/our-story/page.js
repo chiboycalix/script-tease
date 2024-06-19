@@ -1,8 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+import React from "react";
 import Button from "@/components/Button";
 import Title from "@/components/Title";
 
@@ -15,17 +12,6 @@ const SectionWrapper = ({ children }) => {
 };
 
 const OurStory = () => {
-  useGSAP(() => {
-    gsap.to(".title", { opacity: 1, duration: 1, stagger: 0.25 });
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.to(".box", {
-      scrollTrigger: ".box",
-      opacity: 1,
-      delay: 1,
-    });
-  }, []);
-
   return (
     <div className="w-full">
       <div
@@ -35,7 +21,7 @@ const OurStory = () => {
       >
         <div className="flex flex-col justify-center items-center xl:items-start xl:text-left text-center">
           <Title title="Digital Marketing That Drives Result" color="white" />
-          <p className="text-[#859396] mt-4 text-[21px] font-normal leading-[35px] title opacity-0 text-center xl:text-left">
+          <p className="text-[#859396] mt-4 text-[21px] font-normal leading-[35px] title text-center xl:text-left">
             With proprietary software powered by AI and billions of data points
             from decades of industry-leading expertise, WebFX creates
             data-driven strategies that drive revenue, create jobs, and grow

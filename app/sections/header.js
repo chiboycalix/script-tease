@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useRouter, usePathname } from "next/navigation";
 import {
   Navbar,
   Collapse,
@@ -10,7 +11,6 @@ import {
   MenuHandler,
   MenuList,
   MenuItem,
-  Typography,
 } from "@/components/material/MTailwind";
 import {
   ChevronDownIcon,
@@ -20,11 +20,9 @@ import {
 import {
   Bars4Icon,
   GlobeAmericasIcon,
-  NewspaperIcon,
   PhoneIcon,
   RectangleGroupIcon,
   SquaresPlusIcon,
-  SunIcon,
   TagIcon,
   UserGroupIcon,
   ArrowRightIcon,
@@ -114,36 +112,38 @@ const partners = [
 ];
 
 const NavListMenu = ({ navListMenuItems, menuTitle }) => {
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-  const renderItems = navListMenuItems.map(
-    ({ icon, title, path }, key) => (
-      <Link
-        href={`/${path}`}
-        key={key}
-        className="bg-white rounded-md dropdown-link drop-shadow-lg"
-      >
-        <MenuItem className="flex items-center gap-3 text-black font-medium hover:bg-white hover:bg-opacity-10 hover:text-primary">
-          <div className="flex items-center justify-center p-2 ">
-            {" "}
-            {React.createElement(icon, {
-              strokeWidth: 2,
-              className: "h-6 text-primary font-black w-6",
+  
+  const renderItems = navListMenuItems.map(({ icon, title, path }, key) => (
+    <div
+      onClick={() => {
+        router.push(`/${path}`, { scroll: false });
+      }}
+      key={key}
+      className="bg-white rounded-md dropdown-link drop-shadow-lg"
+    >
+      <MenuItem className="flex items-center gap-3 text-black font-medium hover:bg-white hover:bg-opacity-10 hover:text-primary">
+        <div className="flex items-center justify-center p-2 ">
+          {" "}
+          {React.createElement(icon, {
+            strokeWidth: 2,
+            className: "h-6 text-primary font-black w-6",
+          })}
+        </div>
+        <div className="">
+          <p className="flex items-center text-[16px]">
+            {title}{" "}
+            {React.createElement(ArrowRightIcon, {
+              strokeWidth: 10,
+              className: "h-4 text-primary font-black w-6 right-arrow",
             })}
-          </div>
-          <div className="">
-            <p className="flex items-center text-[16px]">
-              {title}{" "}
-              {React.createElement(ArrowRightIcon, {
-                strokeWidth: 10,
-                className: "h-4 text-primary font-black w-6 right-arrow",
-              })}
-            </p>
-          </div>
-        </MenuItem>
-      </Link>
-    )
-  );
+          </p>
+        </div>
+      </MenuItem>
+    </div>
+  ));
 
   return (
     <React.Fragment>
@@ -178,9 +178,7 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
           </div>
         </MenuHandler>
         <MenuList className="hidden rounded-xl lg:block bg-transparent border-none w-[98%] ml-[1%] mt-[2rem] shadow-none menu-list">
-          <ul
-            className={`grid grid-cols-${navListMenuItems.length} gap-[2rem] outline-none outline-0 font-inter`}
-          >
+          <ul className={`grid grid-cols-${navListMenuItems.length} gap-[2rem] outline-none outline-0 font-inter`}>
             {renderItems}
           </ul>
         </MenuList>
@@ -213,8 +211,9 @@ const NavList = () => {
 };
 
 const Header = () => {
-  const {width} = useWindowSize();
+  const { width } = useWindowSize();
   const [openNav, setOpenNav] = React.useState(false);
+  const pathname = usePathname()
 
   React.useEffect(() => {
     window.addEventListener(
@@ -222,6 +221,10 @@ const Header = () => {
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
+
+  React.useEffect(() => {
+    setOpenNav(false)
+  }, [pathname])
 
   return (
     <>
@@ -256,7 +259,7 @@ const Header = () => {
               <NavList />
             </div>
             <div className="hidden gap-2 lg:flex">
-              <Button caption="Get Proposal" size="large"/>
+              <Button caption="Get Proposal" size="large" />
             </div>
             <IconButton
               variant="text"
@@ -272,7 +275,7 @@ const Header = () => {
             </IconButton>
           </div>
           <Collapse open={openNav}>
-            <NavList />
+            <NavList setOpenNav={setOpenNav}/>
             <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
               <Button caption="Get Proposal" size="large" />
             </div>
