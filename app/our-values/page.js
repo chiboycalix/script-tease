@@ -1,6 +1,6 @@
+import React from "react";
 import { Boxes } from "@/components/ui/background-boxes";
 import { cn } from "@/lib/utils";
-import React from "react";
 import "./values.css";
 
 const fertile = [
@@ -97,7 +97,7 @@ const OurValues = () => {
       <div className="relative">
         <div className="relative w-full overflow-hidden bg-[#0B1621] flex flex-col items-center justify-center py-[4rem] sm:py-[8rem]">
           <div className="absolute inset-0 w-full h-full bg-[#0B1621] z-20 [mask-image:radial-gradient(transparent,black)] pointer-events-none"></div>
-          <Boxes />
+          {/* <Boxes /> */}
           <h1
             className={cn(
               "md:text-[48px] text-[32px] font-black text-white relative z-20 w-full ml-[0%] sm:w-[90%] sm:ml-[5%] text-center"
@@ -166,7 +166,7 @@ const OurValues = () => {
         </div>
       </div>
 
-      {/* <Alphabets
+      <Alphabets
         letter="F"
         paragraph="We treat fellow FXers like family & empower them to achieve their"
         span="Personal best."
@@ -208,7 +208,7 @@ const OurValues = () => {
         paragraph="We treat fellow FXers like family & empower them to achieve their"
         span="Personal best."
         id={7}
-      /> */}
+      />
     </div>
   );
 };
