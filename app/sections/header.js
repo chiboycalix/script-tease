@@ -121,7 +121,7 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
       <Link
         href={`/${path}`}
         key={key}
-        className="bg-white rounded-md dropdown-link"
+        className="bg-white rounded-md dropdown-link drop-shadow-lg"
       >
         <MenuItem className="flex items-center gap-3 text-black font-medium hover:bg-white hover:bg-opacity-10 hover:text-primary">
           <div className="flex items-center justify-center p-2 ">
@@ -177,7 +177,7 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
             </ListItem>
           </div>
         </MenuHandler>
-        <MenuList className="hidden rounded-xl lg:block bg-transparent border-none w-full mt-[2rem] shadow-none menu-list">
+        <MenuList className="hidden rounded-xl lg:block bg-transparent border-none w-[98%] ml-[1%] mt-[2rem] shadow-none menu-list">
           <ul
             className={`grid grid-cols-${navListMenuItems.length} gap-[2rem] outline-none outline-0 font-inter`}
           >
