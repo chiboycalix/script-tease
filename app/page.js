@@ -72,7 +72,7 @@ export default function Home() {
           subTitle="Frequently asked Questions and Answers"
         />
         <Faqs />
-        <div className="mt-[5rem] w-full">
+        <div className="mt-[5rem] w-full lg:w-[40%] lg:ml-[30%]">
           <Button
             caption="More FAQs"
             onClick={() => router.push("/faqs", { scroll: false })}

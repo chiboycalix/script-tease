@@ -1,6 +1,7 @@
 import { Boxes } from "@/components/ui/background-boxes";
 import { cn } from "@/lib/utils";
 import React from "react";
+import './values.css';
 
 const fertile = [
   {
@@ -39,27 +40,84 @@ const fertile = [
     color: "91268E",
   },
 ];
+
+const Alphabets = ({ letter, paragraph, span, id }) => {
+  return (
+    <div className="relative mb-[2rem] h-[500px] sm:h-[700px] md:h-[900px] values">
+      <div
+        className={`w-full ${letter === "F" && "bg-[#4CC0B9]"}
+                ${letter === "E" && id === 2 && "bg-[#24B06C]"}
+                ${letter === "R" && "bg-[#98CC63]"}
+                ${letter === "T" && "bg-[#FED02C]"}
+                ${letter === "I" && "bg-[#F6941C]"}
+                ${letter === "L" && "bg-[#F14C51]"}
+                ${
+                  letter === "E" && id === 7 && "bg-[#91268E]"
+                } bg-opacity-10 mt-[22rem] sm:mt-[15rem] pt-[3rem] pb-[15rem]`}
+      >
+        <div className="flex justify-center items-center gap-[50px] sm:flex-row flex-col">
+          <p
+            className={`lg:text-[211px] sm:text-[180px] sm:leading-[180px] leading-[2px] text-[80px] font-black md:leading-[285px] ${
+              letter === "F" && "text-[#4CC0B9]"
+            }
+                ${letter === "E" && id === 2 && "text-[#24B06C]"}
+                ${letter === "R" && "text-[#98CC63]"}
+                ${letter === "T" && "text-[#FED02C]"}
+                ${letter === "I" && "text-[#F6941C]"}
+                ${letter === "L" && "text-[#F14C51]"}
+                ${letter === "E" && id === 7 && "text-[#91268E]"}`}
+          >
+            {letter}
+          </p>
+          <div className="w-[70%]">
+            <p className="lg:text-[48px] sm:text-[32px] text-[20px] font-black">
+              {paragraph}{" "}
+              <span
+                className={`${letter === "F" && "text-[#4CC0B9]"}
+                ${letter === "E" && id === 2 && "text-[#24B06C]"}
+                ${letter === "R" && "text-[#98CC63]"}
+                ${letter === "T" && "text-[#FED02C]"}
+                ${letter === "I" && "text-[#F6941C]"}
+                ${letter === "L" && "text-[#F14C51]"}
+                ${letter === "E" && id === 7 && "text-[#91268E]"}`}
+              >
+                {span}
+              </span>
+            </p>
+          </div>
+        </div>
+        <div className="top-[16rem] sm:top-[20rem] md:top-[25rem] absolute h-[400px] w-[90%] ml-[5%] bg-white drop-shadow-lg rounded-md"></div>
+      </div>
+    </div>
+  );
+};
 const OurValues = () => {
   return (
     <div className="w-full">
       <div className="relative">
-        <div className="relative w-full overflow-hidden bg-[#0B1621] flex flex-col items-center justify-center py-[8rem]">
+        <div className="relative w-full overflow-hidden bg-[#0B1621] flex flex-col items-center justify-center py-[4rem] sm:py-[8rem]">
           <div className="absolute inset-0 w-full h-full bg-[#0B1621] z-20 [mask-image:radial-gradient(transparent,black)] pointer-events-none"></div>
           <Boxes />
           <h1
             className={cn(
-              "text-[48px] font-black text-white relative z-20 w-[90%] ml-[5%] text-center"
+              "md:text-[48px] text-[32px] font-black text-white relative z-20 w-full ml-[0%] sm:w-[90%] sm:ml-[5%] text-center"
             )}
           >
             We are not like this because we work here. We are here because we
             are like this.
           </h1>
-          <p className="text-center mt-2 text-neutral-300 relative z-20 text-white text-[21px]">
+          <p className="text-center mt-2 text-neutral-300 relative z-20 text-white md:text-[21px] text-[18px]">
             At SkillTease, we live by our POSITIVE Code that guides us through
             work and life:
           </p>
         </div>
-        <div className="absolute left-0 h-[100px] bg-transparent top-[25rem] w-full z-50 grid gap-4 grid-cols-7 justify-center px-[20rem]">
+        <div
+          className="absolute h-[100px] left-0 bg-transparent top-[21rem] w-full z-50 grid gap-4 grid-cols-3 justify-center px-[1rem]
+              sm:top-[26rem] sm:grid-cols-7
+              md:top-[30rem]
+              xl:top-[25rem]
+              2xl:px-[15rem]"
+        >
           {fertile.map((f) => {
             return (
               <div
@@ -107,125 +165,50 @@ const OurValues = () => {
           })}
         </div>
       </div>
-      <div className="h-[900px] relative">
-        <div className="w-full bg-[#4CC0B9] bg-opacity-10 mt-[15rem] pt-[3rem] pb-[15rem]">
-          <div className="flex justify-center items-center gap-[50px]">
-            <p className="text-[211px] font-black leading-[285px] text-[#4CC0B9]">
-              F
-            </p>
-            <div className="text-[48px] font-black w-[70%]">
-              <p>
-                We treat fellow FXers like family & empower them to achieve
-                their <span className="text-[#4CC0B9]">Personal best.</span>
-              </p>
-            </div>
-          </div>
-          <div className="top-[25rem] absolute h-[400px] w-[90%] ml-[5%] bg-white shadow-[2px_14px_8px_0px_#EEF8F8]"></div>
-        </div>
-      </div>
 
-      <div className="h-[900px] relative">
-        <div className="w-full bg-[#24B06C] bg-opacity-10 mt-[15rem] pt-[3rem] pb-[15rem]">
-          <div className="flex justify-center items-center gap-[50px]">
-            <p className="text-[211px] font-black leading-[285px] text-[#24B06C]">
-              E
-            </p>
-            <div className="text-[48px] font-black w-[70%]">
-              <p>
-                We treat fellow FXers like family & empower them to achieve
-                their <span className="text-[#24B06C]">Personal best.</span>
-              </p>
-            </div>
-          </div>
-          <div className="top-[25rem] absolute h-[400px] w-[90%] ml-[5%] bg-white shadow-[2px_14px_8px_0px_#ECF7F0]"></div>
-        </div>
-      </div>
+      <Alphabets
+        letter="F"
+        paragraph="We treat fellow FXers like family & empower them to achieve their"
+        span="Personal best."
+        id={1}
+      />
+      <Alphabets
+        letter="E"
+        paragraph="We treat fellow FXers like family & empower them to achieve their"
+        span="Personal best."
+        id={2}
+      />
 
-      <div className="h-[900px] relative">
-        <div className="w-full bg-[#98CC63] bg-opacity-10 mt-[15rem] pt-[3rem] pb-[15rem]">
-          <div className="flex justify-center items-center gap-[50px]">
-            <p className="text-[211px] font-black leading-[285px] text-[#98CC63]">
-              R
-            </p>
-            <div className="text-[48px] font-black w-[70%]">
-              <p>
-                We treat fellow FXers like family & empower them to achieve
-                their <span className="text-[#98CC63]">Personal best.</span>
-              </p>
-            </div>
-          </div>
-          <div className="top-[25rem] absolute h-[400px] w-[90%] ml-[5%] bg-white shadow-[2px_14px_8px_0px_#F5FAEF]"></div>
-        </div>
-      </div>
-
-      <div className="h-[900px] relative">
-        <div className="w-full bg-[#FED02C] bg-opacity-10 mt-[15rem] pt-[3rem] pb-[15rem]">
-          <div className="flex justify-center items-center gap-[50px]">
-            <p className="text-[211px] font-black leading-[285px] text-[#FED02C]">
-              T
-            </p>
-            <div className="text-[48px] font-black w-[70%]">
-              <p>
-                We treat fellow FXers like family & empower them to achieve
-                their <span className="text-[#FED02C]">Personal best.</span>
-              </p>
-            </div>
-          </div>
-          <div className="top-[25rem] absolute h-[400px] w-[90%] ml-[5%] bg-white shadow-[2px_14px_8px_0px_#FFFAEB]"></div>
-        </div>
-      </div>
-
-      <div className="h-[900px] relative">
-        <div className="w-full bg-[#F6941C] bg-opacity-10 mt-[15rem] pt-[3rem] pb-[15rem]">
-          <div className="flex justify-center items-center gap-[50px]">
-            <p className="text-[211px] font-black leading-[285px] text-[#F6941C]">
-              I
-            </p>
-            <div className="text-[48px] font-black w-[70%]">
-              <p>
-                We treat fellow FXers like family & empower them to achieve
-                their <span className="text-[#F6941C]">Personal best.</span>
-              </p>
-            </div>
-          </div>
-          <div className="top-[25rem] absolute h-[400px] w-[90%] ml-[5%] bg-white shadow-[2px_14px_8px_0px_#FFF4EA]"></div>
-        </div>
-      </div>
-
-      <div className="h-[900px] relative">
-        <div className="w-full bg-[#F14C51] bg-opacity-10 mt-[15rem] pt-[3rem] pb-[15rem]">
-          <div className="flex justify-center items-center gap-[50px]">
-            <p className="text-[211px] font-black leading-[285px] text-[#F14C51]">
-              L
-            </p>
-            <div className="text-[48px] font-black w-[70%]">
-              <p>
-                We treat fellow FXers like family & empower them to achieve
-                their <span className="text-[#F14C51]">Personal best.</span>
-              </p>
-            </div>
-          </div>
-          <div className="top-[25rem] absolute h-[400px] w-[90%] ml-[5%] bg-white shadow-[2px_14px_8px_0px_#FFEDED]"></div>
-        </div>
-      </div>
-
-      <div className="h-[900px] relative">
-        <div className="w-full bg-[#91268E] bg-opacity-10 mt-[15rem] pt-[3rem] pb-[15rem]">
-          <div className="flex justify-center items-center gap-[50px]">
-            <p className="text-[211px] font-black leading-[285px] text-[#91268E]">
-              E
-            </p>
-            <div className="text-[48px] font-black w-[70%]">
-              <p>
-                We treat fellow FXers like family & empower them to achieve
-                their <span className="text-[#91268E]">Personal best.</span>
-              </p>
-            </div>
-          </div>
-          <div className="top-[25rem] absolute h-[400px] w-[90%] ml-[5%] bg-white shadow-[2px_14px_8px_0px_#F5E9F3]"></div>
-        </div>
-      </div>
-
+      <Alphabets
+        letter="R"
+        paragraph="We treat fellow FXers like family & empower them to achieve their"
+        span="Personal best."
+        id={3}
+      />
+      <Alphabets
+        letter="T"
+        paragraph="We treat fellow FXers like family & empower them to achieve their"
+        span="Personal best."
+        id={4}
+      />
+      <Alphabets
+        letter="I"
+        paragraph="We treat fellow FXers like family & empower them to achieve their"
+        span="Personal best."
+        id={5}
+      />
+      <Alphabets
+        letter="L"
+        paragraph="We treat fellow FXers like family & empower them to achieve their"
+        span="Personal best."
+        id={6}
+      />
+      <Alphabets
+        letter="E"
+        paragraph="We treat fellow FXers like family & empower them to achieve their"
+        span="Personal best."
+        id={7}
+      />
     </div>
   );
 };
