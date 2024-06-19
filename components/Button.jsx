@@ -2,7 +2,7 @@ import React from "react";
 
 const Button = ({ caption, onClick = null, variant="primary", size="large" }) => {
   const buttonSize = size === 'small' ? 'text-[14px]' : 'text-[18px]'
-  const buttonVariant = variant === 'primary' ? 'bg-primary text-white' : 'bg-white text-black border'
+  const buttonVariant = variant === 'primary' ? 'bg-primary text-white' : 'bg-white text-black border border-primary border-opacity-50'
   return (
     <button
       onClick={onClick}

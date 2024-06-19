@@ -199,12 +199,12 @@ const NavList = () => {
       <NavListMenu navListMenuItems={community} menuTitle={"Community"} />
       <NavListMenu navListMenuItems={partners} menuTitle={"Partners"} />
       <Link href="/faqs">
-        <ListItem className="ml-2 flex items-center justify-start py-4 text-black font-medium hover:bg-primary hover:bg-opacity-10 hover:text-primary">
+        <ListItem className="lg:ml-2 ml-0 flex items-center justify-start py-4 text-black font-medium hover:bg-primary hover:bg-opacity-10 hover:text-primary">
           Faqs
         </ListItem>
       </Link>
       <Link href="/contact-us">
-        <ListItem className="ml-2 flex items-center justify-start py-4 text-black font-medium hover:bg-primary hover:bg-opacity-10 hover:text-primary">
+        <ListItem className="lg:ml-2 ml-0 flex items-center justify-start py-4 text-black font-medium hover:bg-primary hover:bg-opacity-10 hover:text-primary">
           Contact us
         </ListItem>
       </Link>
