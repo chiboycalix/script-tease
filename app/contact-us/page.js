@@ -1,56 +1,42 @@
 import React from "react";
 import { Input, Textarea } from "@/components/material/MTailwind";
 import Button from "@/components/Button";
+import Title from "@/components/Title";
 
+const InputWrapper = ({ children }) => {
+  return <div className="xl:mb-[4rem] lg:mb-[3rem] mb-[5rem]">{children}</div>;
+};
+const TitleAndDescription = ({ title, description }) => {
+  return (
+    <div>
+      <p className="text-[14px] font-bold text-[#abb9c2] text-center lg:text-left">
+        {title}
+      </p>
+      <p className="text-white text-[24px] leading-[32px] text-center lg:text-left">
+        {description}
+      </p>
+    </div>
+  );
+};
 const ContactUs = () => {
   return (
-    <div className="relativew-full py-[5rem] bg-primary-950 px-[2rem] mb-[20rem]">
+    <div className="relative w-full py-[5rem] bg-primary-950 px-[2rem] mb-[20rem]">
       <div>
-        <div className="flex justify-center pb-[15rem]">
-          <div className="basis-[60%]">
-            <p className="text-white w-[70%] text-[72px] font-black leading-[78px]">
-              Let’s do great work together.
-            </p>
-            <div className="grid grid-cols-4 mt-[2rem]">
-              <div>
-                <p className="text-[14px] font-bold text-[#abb9c2]">
-                  TOLL FREE
-                </p>
-                <p className="text-white text-[24px] leading-[32px]">
-                  1.888.449.3239
-                </p>
-              </div>
-              <div>
-                <p className="text-[14px] font-bold text-[#abb9c2]">
-                  SALES DIRECT
-                </p>
-                <p className="text-white text-[24px] leading-[32px]">
-                  717.609.1553
-                </p>
-              </div>
-              <div>
-                <p className="text-[14px] font-bold text-[#abb9c2]">
-                  SALES DIRECT
-                </p>
-                <p className="text-white text-[24px] leading-[32px]">
-                  717.609.1553
-                </p>
-              </div>
-              <div>
-                <p className="text-[14px] font-bold text-[#abb9c2]">
-                  SALES DIRECT
-                </p>
-                <p className="text-white text-[24px] leading-[32px]">
-                  717.609.1553
-                </p>
-              </div>
+        <div className="flex justify-center lg:pb-[15rem] pb-[45rem]">
+          <div className="lg:basis-[60%] basis-[100%]">
+            <div className="text-center lg:text-left"><Title title="Let’s do great work together." color="white" /></div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 xl:grid-cols-4 xl:gap-0 lg:gap-6 lg:grid-cols-2 mt-[2rem]">
+              <TitleAndDescription title="TOLL FREE" description="130000"/>
+              <TitleAndDescription title="SALES DIRECT" description="130000"/>
+              <TitleAndDescription title="FAX" description="130000"/>
+              <TitleAndDescription title="LOCAL" description="130000"/>
             </div>
           </div>
           <div className="flex-1"></div>
         </div>
-        <div className="absolute w-[40%] right-[2rem] top-[15rem] shadow-[0px_7px_8px_0px_#EAF3FC] rounded-xl">
+        <div className="absolute xl:w-[40%] lg:w-[45%] sm:w-[93%] w-[85%] lg:right-[2rem] lg:top-[5rem] sm:top-[20rem] top-[25rem] shadow-[0px_7px_8px_0px_#EAF3FC] rounded-xl">
           <div className="w-full bg-white px-[2rem] py-[5rem] rounded-md">
-            <div className="mb-[4rem]">
+            <InputWrapper>
               <Input
                 variant="static"
                 label={
@@ -60,8 +46,8 @@ const ContactUs = () => {
                 }
                 required
               />
-            </div>
-            <div className="mb-[4rem]">
+            </InputWrapper>
+            <InputWrapper>
               <Input
                 variant="static"
                 label={
@@ -71,8 +57,8 @@ const ContactUs = () => {
                 }
                 required
               />
-            </div>
-            <div className="mb-[4rem]">
+            </InputWrapper>
+            <InputWrapper>
               <Input
                 variant="static"
                 label={
@@ -80,8 +66,8 @@ const ContactUs = () => {
                 }
                 required
               />
-            </div>
-            <div className="mb-[4rem]">
+            </InputWrapper>
+            <InputWrapper>
               <Input
                 variant="static"
                 label={
@@ -91,8 +77,8 @@ const ContactUs = () => {
                 }
                 required
               />
-            </div>
-            <div className="mb-[4rem]">
+            </InputWrapper>
+            <InputWrapper>
               <Textarea
                 variant="static"
                 label={
@@ -102,7 +88,7 @@ const ContactUs = () => {
                 }
                 required
               />
-            </div>
+            </InputWrapper>
             <Button caption="Get in touch" />
           </div>
         </div>
