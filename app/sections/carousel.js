@@ -85,7 +85,7 @@ const HomeCarousel = () => {
       autoplay={true}
       loop={true}
       transition={{ duration: 1, type: "spring" }}
-      className="py-[3rem] bg-primary bg-opacity-5"
+      className="py-[3rem] bg-primary-500 bg-opacity-5"
       prevArrow={({ handlePrev }) => <div className="hidden"></div>}
       nextArrow={({ handleNext }) => <div className="hidden"></div>}
       navigation={({ setActiveIndex, activeIndex, length }) => (
@@ -94,7 +94,7 @@ const HomeCarousel = () => {
             <span
               key={i}
               className={`block h-5 w-5 cursor-pointer rounded-2xl transition-all content-[''] ${
-                activeIndex === i ? "w-5 bg-primary" : "w-4 bg-primary/50"
+                activeIndex === i ? "w-5 bg-primary-500" : "w-4 bg-primary-500/50"
               }`}
               onClick={() => setActiveIndex(i)}
             />

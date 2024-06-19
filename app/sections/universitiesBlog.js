@@ -49,10 +49,10 @@ const UniversitiesBlog = () => {
             />
             <Link href={`/blogs/${universitiesBlog.slug}`}>
               <div className="mt-[1rem] cursor-pointer">
-                <p className="text-[18px] font-bold text-primary">
+                <p className="text-[18px] font-bold text-primary-500">
                   {universitiesBlog.category}
                 </p>
-                <p className="text-[21px] font-extrabold hover:text-primary cursor-pointer mt-[0.5rem]">
+                <p className="text-[21px] font-extrabold hover:text-primary-500 cursor-pointer mt-[0.5rem]">
                   {universitiesBlog.title}
                 </p>
 

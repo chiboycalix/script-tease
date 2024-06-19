@@ -15,7 +15,7 @@ import React from "react";
 
 const Description = ({ title, description, list }) => {
   return (
-    <div className="bg-primary w-[82%] ml-[9%] rounded-xl py-[5rem] px-[2rem] backdrop-brightness-0">
+    <div className="bg-primary-950 w-[82%] ml-[9%] rounded-xl py-[5rem] px-[2rem] backdrop-brightness-0">
       <p className="text-center text-[24px] font-bold mb-[1.5rem]">{title}</p>
       <p className="text-[21px] leading-[35px] font-normal">{description}</p>
       <ul className="list-disc text-[18px] ml-[1rem] mt-[2rem] flex flex-col gap-5">
@@ -117,7 +117,7 @@ export function VerticalTabs() {
   return (
     <Tabs value="html" orientation="vertical">
       <TabsHeader
-        className="w-[25rem] bg-transparent cursor-pointer rounded-[26px] text-primary mr-[1rem] text-left"
+        className="w-[25rem] bg-transparent cursor-pointer rounded-[26px] text-primary-500 mr-[1rem] text-left"
         indicatorProps={{
           className: "custom_shadow",
         }}
@@ -126,7 +126,7 @@ export function VerticalTabs() {
           <Tab
             key={value}
             value={value}
-            className="py-[2rem] text-[18px] font-bold hover:text-primary justify-start px-[20px] text-left mb-[1rem]"
+            className="py-[2rem] text-[18px] font-bold hover:text-primary-500 justify-start px-[20px] text-left mb-[1rem]"
           >
             <div className="flex items-center gap-5">
               <div>

@@ -5,7 +5,7 @@ import { ParallaxScrollDemo } from "./scrolling-parallax";
 
 const Partnerships = () => {
   return (
-    <div className="w-full p-[5rem] bg-primary bg-opacity-5">
+    <div className="w-full p-[5rem] bg-primary-500 bg-opacity-5">
       <div className="w-full">
         <p className="text-center text-[48px] font-extrabold">Proprietary Technology for Smarter Marketing</p>
         <p className="text-center text-[21px] leading-[35px]">

@@ -80,7 +80,7 @@ const OurStory = () => {
               PARTNER WITH A DEDICATED AGENCY YOU CAN TRUST
             </p>
             <p className="text-[48px] font-black leading-[56px] mt-[1rem]">
-              <span className="text-primary">Nationally-recognized</span> awards
+              <span className="text-primary-500">Nationally-recognized</span> awards
               & partnerships
             </p>
             <p className="text-[21px] w-full lg:w-[86%] mt-[2rem] text-[#222]">
@@ -101,7 +101,7 @@ const OurStory = () => {
               PARTNER WITH A DEDICATED AGENCY YOU CAN TRUST
             </p>
             <p className="text-[48px] font-black leading-[56px] mt-[1rem]">
-              <span className="text-primary">Nationally-recognized</span> awards
+              <span className="text-primary-500">Nationally-recognized</span> awards
               & partnerships
             </p>
             <p className="text-[21px] w-full lg:w-[86%] mt-[2rem] text-[#222]">

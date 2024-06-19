@@ -132,7 +132,7 @@ const Events = () => {
   }, []);
 
   return (
-    <div className="w-full py-[5rem] sm:py-[3rem] xl:px-[5rem] px-[1rem] lg:px-[3rem] bg-primary bg-opacity-5" ref={container}>
+    <div className="w-full py-[5rem] sm:py-[3rem] xl:px-[5rem] px-[1rem] lg:px-[3rem] bg-primary-500 bg-opacity-5" ref={container}>
       <p className="text-[48px] font-black">Events</p>
       {projects.map((project, i) => {
         const targetScale = 1 - (project.length - i) * 0.05;

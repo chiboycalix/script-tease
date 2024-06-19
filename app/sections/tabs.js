@@ -40,21 +40,21 @@ const HomeTabs = () => {
               earn while they learn.
             </p>
             <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Industry Collaboration:{" "}
               </span>
               Build partnerships with leading companies and government agencies
               for research and development.
             </p>
             <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Student Opportunities:{" "}
               </span>
               Provide students with hands-on experience, internships, and
               earning opportunities.
             </p>
             <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Innovative Learning:{" "}
               </span>
               Access cutting-edge resources and tools that foster innovative
@@ -63,35 +63,35 @@ const HomeTabs = () => {
           </DescriptionContent>
           <DescriptionContent>
             <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Reputation Building:{" "}
               </span>
               Boost the university’s reputation as a forward-thinking
               institution dedicated to student success and industry engagement.
             </p>
             <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Funding Opportunities:{" "}
               </span>
               Gain access to potential funding from partnerships with companies
               and government agencies.
             </p>
             <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Research Support:{" "}
               </span>
               Collaborate on research projects that can lead to significant
               academic contributions and advancements.
             </p>
             <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Career Readiness:{" "}
               </span>
               Equip students with the skills and experience needed to excel in
               their future careers.
             </p>
             <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Community Impact:{" "}
               </span>
               Play a pivotal role in driving societal progress by preparing the
@@ -117,21 +117,21 @@ const HomeTabs = () => {
               tomorrow's workforce with SkillTribe!
             </p>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Access to Talent:{" "}
               </span>
               Tap into a diverse pool of skilled students ready to contribute to
               your projects.
             </p>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Enhanced CSR:{" "}
               </span>
               Demonstrate corporate social responsibility by investing in
               education and supporting the professional growth of young talents.
             </p>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Collaborative Opportunities:{" "}
               </span>{" "}
               Partner with universities and government agencies on research and
@@ -140,7 +140,7 @@ const HomeTabs = () => {
           </DescriptionContent>
           <DescriptionContent>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Cost-Effective Solutions:{" "}
               </span>
               Leverage student involvement for cost-effective project
@@ -149,21 +149,21 @@ const HomeTabs = () => {
               communities.
             </p>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Future Workforce Development:{" "}
               </span>
               Shape the skills and knowledge of potential future employees,
               ensuring they meet industry standards.
             </p>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Research Advancements:{" "}
               </span>
               Collaborate on cutting-edge research projects that can lead to
               significant industry advancements.
             </p>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Continuous Learning:{" "}
               </span>
               Stay updated with the latest academic and industry trends through
@@ -188,7 +188,7 @@ const HomeTabs = () => {
               participant in shaping the future.
             </p>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Hands-On Experience:{" "}
               </span>
               Work on real-world projects that provide practical, hands-on
@@ -196,7 +196,7 @@ const HomeTabs = () => {
               valuable work experience.
             </p>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Skill Enhancement:{" "}
               </span>
               Skill Enhancement: Develop and refine skills that are highly
@@ -209,7 +209,7 @@ const HomeTabs = () => {
               and government agencies.
             </p>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Career Readiness:{" "}
               </span>
               Career Readiness: Gain a competitive edge in the job market with
@@ -218,20 +218,20 @@ const HomeTabs = () => {
               academia and industry.
             </p>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary font-extrabold">Mentorship: </span>
+              <span className="text-primary-500 font-extrabold">Mentorship: </span>
               Mentorship: Receive guidance and mentorship from experienced
               professionals. Portfolio Building: Create a portfolio of completed
               projects to showcase to future employers.
             </p>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Research Opportunities:{" "}
               </span>
               Research Opportunities: Engage in research projects that can
               contribute to academic and industry advancements.
             </p>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary font-extrabold">
+              <span className="text-primary-500 font-extrabold">
                 Personal Growth:{" "}
               </span>
               Personal Growth: Enhance your problem-solving, teamwork, and
@@ -248,7 +248,7 @@ const HomeTabs = () => {
       <TabsHeader
         className="bg-transparent h-[300px] rounded flex flex-col sm:flex-row sm:h-[128px]"
         indicatorProps={{
-          className: "bg-primary bg-opacity-10 shadow-none",
+          className: "bg-primary-500 bg-opacity-10 shadow-none",
         }}
       >
         {data.map(({ label, value }) => (
@@ -257,7 +257,7 @@ const HomeTabs = () => {
             value={value}
             onClick={() => setActiveTab(value)}
             className={`font-black text-[24px] lg:text-[28px] ${
-              activeTab === value ? "text-primary" : ""
+              activeTab === value ? "text-primary-500" : ""
             }`}
           >
             {label}

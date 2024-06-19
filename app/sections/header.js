@@ -124,12 +124,12 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
       key={key}
       className="bg-white rounded-md dropdown-link drop-shadow-lg"
     >
-      <MenuItem className="flex items-center gap-3 text-black font-medium hover:bg-white hover:bg-opacity-10 hover:text-primary">
+      <MenuItem className="flex items-center gap-3 text-black font-medium hover:bg-white hover:bg-opacity-10 hover:text-primary-500">
         <div className="flex items-center justify-center p-2 ">
           {" "}
           {React.createElement(icon, {
             strokeWidth: 2,
-            className: "h-6 text-primary font-black w-6",
+            className: "h-6 text-primary-500 font-black w-6",
           })}
         </div>
         <div className="">
@@ -137,7 +137,7 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
             {title}{" "}
             {React.createElement(ArrowRightIcon, {
               strokeWidth: 10,
-              className: "h-4 text-primary font-black w-6 right-arrow",
+              className: "h-4 text-primary-500 font-black w-6 right-arrow",
             })}
           </p>
         </div>
@@ -157,7 +157,7 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
         <MenuHandler>
           <div className="font-medium">
             <ListItem
-              className="flex items-center py-4 font-medium text-black hover:bg-primary hover:bg-opacity-10 hover:text-primary"
+              className="flex items-center py-4 font-medium text-black hover:bg-primary-500 hover:bg-opacity-10 hover:text-primary-500"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -197,17 +197,17 @@ const NavList = () => {
       <NavListMenu navListMenuItems={community} menuTitle={"Community"} />
       <NavListMenu navListMenuItems={partners} menuTitle={"Partners"} />
       <Link href="/faqs">
-        <ListItem className="lg:ml-2 ml-0 flex items-center justify-start py-4 text-black font-medium hover:bg-primary hover:bg-opacity-10 hover:text-primary">
+        <ListItem className="lg:ml-2 ml-0 flex items-center justify-start py-4 text-black font-medium hover:bg-primary-500 hover:bg-opacity-10 hover:text-primary-500">
           Faqs
         </ListItem>
       </Link>
       <Link href="/contact-us">
-        <ListItem className="lg:ml-2 ml-0 flex items-center justify-start py-4 text-black font-medium hover:bg-primary hover:bg-opacity-10 hover:text-primary">
+        <ListItem className="lg:ml-2 ml-0 flex items-center justify-start py-4 text-black font-medium hover:bg-primary-500 hover:bg-opacity-10 hover:text-primary-500">
           Contact us
         </ListItem>
       </Link>
       {/* <Link href="/sample">
-        <ListItem className="lg:ml-2 ml-0 flex items-center justify-start py-4 text-black font-medium hover:bg-primary hover:bg-opacity-10 hover:text-primary">
+        <ListItem className="lg:ml-2 ml-0 flex items-center justify-start py-4 text-black font-medium hover:bg-primary-500 hover:bg-opacity-10 hover:text-primary-500">
           Sample
         </ListItem>
       </Link> */}

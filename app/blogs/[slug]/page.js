@@ -50,7 +50,7 @@ const BlogContent = ({ title, description, secondDescription }) => {
   return (
     <>
       <div className="flex items-center gap-2 mb-[22px]">
-        <div className="w-[26px] h-[26px] rounded-full bg-primary"></div>
+        <div className="w-[26px] h-[26px] rounded-full bg-primary-500"></div>
         <p className="text-[22px] font-extrabold">{title}</p>
       </div>
       <Paragraph text={description} />

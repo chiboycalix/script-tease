@@ -39,8 +39,8 @@ const HomePageBlogs = () => {
               <Image src={homePageBlog.img} className="rounded-md h-[8.3rem]" alt="homePageBlog.img"/>
             </div>
             <div className="flex-1">
-              <p className="text-[18px] font-bold leading-[22px] mb-2 text-primary">{homePageBlog.category}</p>
-              <p className="text-[21px] font-extrabold leading-[29px] hover:text-primary">{homePageBlog.title}</p>
+              <p className="text-[18px] font-bold leading-[22px] mb-2 text-primary-500">{homePageBlog.category}</p>
+              <p className="text-[21px] font-extrabold leading-[29px] hover:text-primary-500">{homePageBlog.title}</p>
             </div>
           </div>
         );

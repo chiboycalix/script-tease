@@ -7,7 +7,7 @@ const GovernmentOrganisation = () => {
   return (
     <div className="mt-[5rem]">
     <div className="flex justify-start items-center gap-4 mb-[2rem]">
-      <div className="w-[32px] h-[32px] rounded-full bg-primary"></div>
+      <div className="w-[32px] h-[32px] rounded-full bg-primary-500"></div>
       <div>
         <p className="text-[32px] font-extrabold">
           Government Organisation
@@ -24,8 +24,8 @@ const GovernmentOrganisation = () => {
           className="h-[400px] rounded-t-md"
         />
         <div className="mt-[1rem] cursor-pointer p-[2rem]">
-          <p className="text-[18px] font-bold text-primary">WEB DESIGN</p>
-          <p className="text-[32px] font-extrabold hover:text-primary cursor-pointer mt-[0.5rem]">
+          <p className="text-[18px] font-bold text-primary-500">WEB DESIGN</p>
+          <p className="text-[32px] font-extrabold hover:text-primary-500 cursor-pointer mt-[0.5rem]">
             40 Simple Minimalist Web Design Examples (Inspiration)
           </p>
           <p className="text-[18px] mt-[1rem]">

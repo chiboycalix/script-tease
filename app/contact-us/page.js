@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 
 const ContactUs = () => {
   return (
-    <div className="relativew-full py-[5rem] bg-[#152034] px-[2rem] mb-[20rem]">
+    <div className="relativew-full py-[5rem] bg-primary-950 px-[2rem] mb-[20rem]">
       <div>
         <div className="flex justify-center pb-[15rem]">
           <div className="basis-[60%]">

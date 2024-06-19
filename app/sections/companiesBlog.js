@@ -54,10 +54,10 @@ const CompaniesBlogs = () => {
             </div>
             <div className="flex-1">
               <Link href={`/blogs/${companiesBlog.slug}`}>
-                <p className="text-[18px] font-bold leading-[22px] mb-2 text-primary">
+                <p className="text-[18px] font-bold leading-[22px] mb-2 text-primary-500">
                   {companiesBlog.category}
                 </p>
-                <p className="text-[21px] font-extrabold leading-[29px] hover:text-primary">
+                <p className="text-[21px] font-extrabold leading-[29px] hover:text-primary-500">
                   {companiesBlog.title}
                 </p>
               </Link>
