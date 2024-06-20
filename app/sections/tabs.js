@@ -7,6 +7,8 @@ import {
   Tab,
   TabPanel,
 } from "../../components/material/MTailwind";
+import Image from "next/image";
+import BlogOne from "@/assets/blog-1.png";
 
 const DescriptionWrapper = ({ children }) => {
   return (
@@ -15,10 +17,16 @@ const DescriptionWrapper = ({ children }) => {
     </div>
   );
 };
-const DescriptionContent = ({ children }) => {
+
+const LeftDescription = ({ children }) => {
   return (
-    <div className="basis-1/2 p-[1rem] rounded-xl border-[1px] border-black border-opacity-40">{children}</div>
+    <div className="basis-1/2 p-[1rem] rounded-xl border-[1px] border-black border-opacity-40">
+      {children}
+    </div>
   );
+};
+const RightDescription = ({ children }) => {
+  return <div className="flex flex-col gap-5">{children}</div>;
 };
 
 const HomeTabs = () => {
@@ -29,7 +37,7 @@ const HomeTabs = () => {
       value: "University",
       desc: (
         <DescriptionWrapper>
-          <DescriptionContent>
+          <LeftDescription>
             <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
               {" "}
               By partnering with us, your university will gain access to
@@ -60,44 +68,33 @@ const HomeTabs = () => {
               Access cutting-edge resources and tools that foster innovative
               teaching methods.
             </p>
-          </DescriptionContent>
-          <DescriptionContent>
-            <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
-              <span className="text-primary-500 font-extrabold">
-                Reputation Building:{" "}
-              </span>
-              Boost the university’s reputation as a forward-thinking
-              institution dedicated to student success and industry engagement.
-            </p>
-            <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
-              <span className="text-primary-500 font-extrabold">
-                Funding Opportunities:{" "}
-              </span>
-              Gain access to potential funding from partnerships with companies
-              and government agencies.
-            </p>
-            <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
-              <span className="text-primary-500 font-extrabold">
-                Research Support:{" "}
-              </span>
-              Collaborate on research projects that can lead to significant
-              academic contributions and advancements.
-            </p>
-            <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
-              <span className="text-primary-500 font-extrabold">
-                Career Readiness:{" "}
-              </span>
-              Equip students with the skills and experience needed to excel in
-              their future careers.
-            </p>
-            <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
-              <span className="text-primary-500 font-extrabold">
-                Community Impact:{" "}
-              </span>
-              Play a pivotal role in driving societal progress by preparing the
-              next generation of leaders and innovators.
-            </p>
-          </DescriptionContent>
+          </LeftDescription>
+          <RightDescription>
+            <div className="basis-1/2 rounded-xl border-[1px] border-black border-opacity-40">
+              <Image
+                src={BlogOne}
+                alt="BlogOne"
+                className="rounded-xl h-full"
+              />
+            </div>
+            <div className="basis-1/2 p-[1rem] rounded-xl border-[1px] border-black border-opacity-40">
+              <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
+                <span className="text-primary-500 font-extrabold">
+                  Reputation Building:{" "}
+                </span>
+                Boost the university’s reputation as a forward-thinking
+                institution dedicated to student success and industry
+                engagement.
+              </p>
+              <p className="text-[24px] text-[#353535] font-medium leading-[49px]">
+                <span className="text-primary-500 font-extrabold">
+                  Funding Opportunities:{" "}
+                </span>
+                Gain access to potential funding from partnerships with
+                companies and government agencies.
+              </p>
+            </div>
+          </RightDescription>
         </DescriptionWrapper>
       ),
     },
@@ -106,7 +103,7 @@ const HomeTabs = () => {
       value: "organisation",
       desc: (
         <DescriptionWrapper>
-          <DescriptionContent>
+          <LeftDescription>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
               {" "}
               Collaborate with top universities and government bodies to solve
@@ -137,39 +134,32 @@ const HomeTabs = () => {
               Partner with universities and government agencies on research and
               development initiatives.
             </p>
-          </DescriptionContent>
-          <DescriptionContent>
-            <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary-500 font-extrabold">
-                Cost-Effective Solutions:{" "}
-              </span>
-              Leverage student involvement for cost-effective project
-              completion. Brand Visibility: Increase your organization’s
-              visibility and reputation among academic and professional
-              communities.
-            </p>
-            <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary-500 font-extrabold">
-                Future Workforce Development:{" "}
-              </span>
-              Shape the skills and knowledge of potential future employees,
-              ensuring they meet industry standards.
-            </p>
-            <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary-500 font-extrabold">
-                Research Advancements:{" "}
-              </span>
-              Collaborate on cutting-edge research projects that can lead to
-              significant industry advancements.
-            </p>
-            <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary-500 font-extrabold">
-                Continuous Learning:{" "}
-              </span>
-              Stay updated with the latest academic and industry trends through
-              ongoing collaborations and interactions.
-            </p>
-          </DescriptionContent>
+          </LeftDescription>
+          <RightDescription>
+            <div className="basis-1/2 rounded-xl border-[1px] border-black border-opacity-40">
+              <Image
+                src={BlogOne}
+                alt="BlogOne"
+                className="rounded-xl h-full"
+              />
+            </div>
+            <div className="basis-1/2 p-[1rem] rounded-xl border-[1px] border-black border-opacity-40">
+              <p className="text-2xl text-[#353535] font-medium leading-[50px]">
+                <span className="text-primary-500 font-extrabold">
+                  Research Advancements:{" "}
+                </span>
+                Collaborate on cutting-edge research projects that can lead to
+                significant industry advancements.
+              </p>
+              <p className="text-2xl text-[#353535] font-medium leading-[50px]">
+                <span className="text-primary-500 font-extrabold">
+                  Continuous Learning:{" "}
+                </span>
+                Stay updated with the latest academic and industry trends
+                through ongoing collaborations and interactions.
+              </p>
+            </div>
+          </RightDescription>
         </DescriptionWrapper>
       ),
     },
@@ -178,7 +168,7 @@ const HomeTabs = () => {
       value: "student",
       desc: (
         <DescriptionWrapper>
-          <DescriptionContent>
+          <LeftDescription>
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
               As a partner, you’ll collaborate on impactful projects, enhance
               your skills, and build a professional network that sets you apart
@@ -203,22 +193,20 @@ const HomeTabs = () => {
               sought after by employers. Professional Networking: Build
               connections with industry professionals, companies, universities,
             </p>
-          </DescriptionContent>
-          <DescriptionContent>
-            <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              and government agencies.
-            </p>
+          </LeftDescription>
+          <RightDescription>
+          <div className="basis-1/2 rounded-xl border-[1px] border-black border-opacity-40">
+              <Image
+                src={BlogOne}
+                alt="BlogOne"
+                className="rounded-xl h-full"
+              />
+            </div>
+            <div className="basis-1/2 p-[1rem] rounded-xl border-[1px] border-black border-opacity-40">
             <p className="text-2xl text-[#353535] font-medium leading-[50px]">
               <span className="text-primary-500 font-extrabold">
-                Career Readiness:{" "}
+                Mentorship:{" "}
               </span>
-              Career Readiness: Gain a competitive edge in the job market with
-              relevant experience and skills. Collaborative Projects:
-              Participate in collaborative projects that bridge the gap between
-              academia and industry.
-            </p>
-            <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary-500 font-extrabold">Mentorship: </span>
               Mentorship: Receive guidance and mentorship from experienced
               professionals. Portfolio Building: Create a portfolio of completed
               projects to showcase to future employers.
@@ -230,14 +218,8 @@ const HomeTabs = () => {
               Research Opportunities: Engage in research projects that can
               contribute to academic and industry advancements.
             </p>
-            <p className="text-2xl text-[#353535] font-medium leading-[50px]">
-              <span className="text-primary-500 font-extrabold">
-                Personal Growth:{" "}
-              </span>
-              Personal Growth: Enhance your problem-solving, teamwork, and
-              leadership abilities.
-            </p>
-          </DescriptionContent>
+            </div>
+          </RightDescription>
         </DescriptionWrapper>
       ),
     },

@@ -34,6 +34,15 @@ export default function Home() {
     <main>
       <HomeCarousel />
       <HorizontalScroll />
+
+      <SectionWrapper>
+        <SectionHeader
+          title="Our Blogs"
+          subTitle="Learn more about our blogs"
+        />
+        <HomePageBlogs />
+      </SectionWrapper>
+
       <div className="px-[1rem] py-[5rem]">
         <SectionHeader
           title="Our partners"
@@ -50,14 +59,6 @@ export default function Home() {
             growth."
         />
         <HomeTabs />
-      </SectionWrapper>
-
-      <SectionWrapper>
-        <SectionHeader
-          title="Our Blogs"
-          subTitle="Learn more about our blogs"
-        />
-        <HomePageBlogs />
       </SectionWrapper>
 
       <SectionWrapper>
