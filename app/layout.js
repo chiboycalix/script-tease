@@ -8,30 +8,6 @@ import "@/app/globals.css";
 import "@/components/styles/layout.css";
 
 export default function RootLayout({ children }) {
-  useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
-    })();
-  }, []);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    window.onscroll = function () {
-      myFunction();
-    };
-
-    var header = document.getElementById("myHeader");
-    var sticky = header.offsetTop;
-
-    function myFunction() {
-      if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-      } else {
-        header.classList.remove("sticky");
-      }
-    }
-  }, []);
   return (
     <html lang="en">
       <Head>
@@ -46,7 +22,7 @@ export default function RootLayout({ children }) {
       <ThemeProvider>
         <body>
           <Header />
-          <div className="content">{children}</div>
+          <div className="content lg:mt-[5rem] mt-[4rem]">{children}</div>
           <Footer />
         </body>
       </ThemeProvider>

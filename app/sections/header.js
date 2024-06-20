@@ -77,12 +77,6 @@ const community = [
     icon: TagIcon,
     path: "programs",
   },
-  {
-    title: "Blog",
-    description: "Find the perfect solution for your needs.",
-    icon: Bars4Icon,
-    path: "blogs",
-  },
 ];
 const partners = [
   {
@@ -103,29 +97,35 @@ const partners = [
     icon: UserGroupIcon,
     path: "our-story",
   },
-  {
-    title: "Blog",
-    description: "Find the perfect solution for your needs.",
-    icon: Bars4Icon,
-    path: "our-story",
-  },
 ];
+
+const PhoneNumber = () => {
+  return (
+    <p className="text-black flex items-center gap-2 basis-[50%]">
+      <PhoneIcon
+        strokeWidth={2.5}
+        className={`h-5 w-5 transition-transform text-primary-500`}
+      />
+      <span className="inline-block">+1 (555) 555-1234</span>
+    </p>
+  );
+};
 
 const NavListMenu = ({ navListMenuItems, menuTitle }) => {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-  
+
   const renderItems = navListMenuItems.map(({ icon, title, path }, key) => (
     <div
       onClick={() => {
         router.push(`/${path}`, { scroll: false });
       }}
       key={key}
-      className="bg-white rounded-md dropdown-link drop-shadow-lg"
+      className="dropdown-link"
     >
       <MenuItem className="flex items-center gap-3 text-black font-medium hover:bg-white hover:bg-opacity-10 hover:text-primary-500">
-        <div className="flex items-center justify-center p-2 ">
+        <div className="flex items-center justify-center p-2">
           {" "}
           {React.createElement(icon, {
             strokeWidth: 2,
@@ -177,8 +177,8 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
             </ListItem>
           </div>
         </MenuHandler>
-        <MenuList className="hidden rounded-xl lg:block bg-transparent border-none w-[98%] ml-[1%] mt-[2rem] shadow-none menu-list">
-          <ul className={`grid grid-cols-${navListMenuItems.length} gap-[2rem] outline-none outline-0 font-inter`}>
+        <MenuList className="hidden rounded-xl lg:block bg-transparent border-none w-[20%] mt-[1rem] shadow-none menu-list">
+          <ul className="border-none outline-none rounded-xl bg-white drop-shadow-lg">
             {renderItems}
           </ul>
         </MenuList>
@@ -192,7 +192,7 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
 
 const NavList = () => {
   return (
-    <List className="mt-4 mb-6 lg:mt-0 lg:mb-0 lg:flex-row lg:p-3 items-left font-inter">
+    <List className="mt-4 mb-6 lg:mt-0 lg:mb-0 lg:flex-row lg:p-3 items-left justify-center font-inter">
       <NavListMenu navListMenuItems={aboutUs} menuTitle={"About Us"} />
       <NavListMenu navListMenuItems={community} menuTitle={"Community"} />
       <NavListMenu navListMenuItems={partners} menuTitle={"Partners"} />
@@ -218,7 +218,7 @@ const NavList = () => {
 const Header = () => {
   const { width } = useWindowSize();
   const [openNav, setOpenNav] = React.useState(false);
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   React.useEffect(() => {
     window.addEventListener(
@@ -228,43 +228,25 @@ const Header = () => {
   }, []);
 
   React.useEffect(() => {
-    setOpenNav(false)
-  }, [pathname])
+    setOpenNav(false);
+  }, [pathname]);
 
   return (
     <>
-      <div className="flex justify-between items-center px-[1rem] py-[1rem] bg-white">
-        <div className="hidden lg:block">Revenue</div>
-        <p className="lg:hidden block">+1 (555) 555-1234</p>
-        <div className="flex justify-between items-center gap-5">
-          <div className="">
-            {width <= 1024 ? (
-              <Button caption="Meet Sponsors" variant="primary" size="small" />
-            ) : (
-              <Button
-                caption="Meet Sponsors"
-                variant="secondary"
-                size="small"
-              />
-            )}
-          </div>
-          <div className="hidden lg:block">
-            <p>+1 (555) 555-1234</p>
-          </div>
-        </div>
-      </div>
-      <div id="myHeader" className="myHeader">
-        <hr className="block lg:hidden text-black opacity-100 border-none h-[1px] bg-black bg-opacity-30" />
-        <Navbar className="w-full max-w-screen-3xl rounded-none bg-white px-[1rem] bg-opacity-100 py-2">
-          <div className="flex items-center justify-between text-black">
-            <Link href="/" className="cursor-pointer py-1.5 lg:ml-2">
+      <div className="max-h-[768px] w-[calc(100%+48px)] overflow-scroll">
+        <Navbar className="sticky top-0 z-[100] h-max w-full max-w-screen-3xl rounded-none bg-white px-[1rem] bg-opacity-100 py-2">
+          <div className="flex items-center gap-10 justify-between text-black">
+            <Link href="/" className="cursor-pointer py-1.5 basis-[10%]">
               Logo
             </Link>
-            <div className="hidden lg:block">
+            <div className="hidden lg:block basis-[55%] mx-auto">
               <NavList />
             </div>
-            <div className="hidden gap-2 lg:flex">
-              <Button caption="Get Proposal" size="large" />
+            <div className="hidden lg:flex justify-end gap-1 items-center flex-1">
+              <PhoneNumber />
+              <div className="flex-1">
+                <Button caption="Get Proposal" size="large" />
+              </div>
             </div>
             <IconButton
               variant="text"
@@ -280,8 +262,15 @@ const Header = () => {
             </IconButton>
           </div>
           <Collapse open={openNav}>
-            <NavList setOpenNav={setOpenNav}/>
-            <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
+            <NavList setOpenNav={setOpenNav} />
+            <div className="flex w-full flex-col flex-nowrap items-center gap-4 lg:hidden">
+              <p className="text-black flex items-center gap-2">
+                <PhoneIcon
+                  strokeWidth={2.5}
+                  className={`h-5 w-5 transition-transform lg:ml-2 text-primary-500 `}
+                />
+                <span className="inline-block">+1 (555) 555-1234</span>
+              </p>
               <Button caption="Get Proposal" size="large" />
             </div>
           </Collapse>
