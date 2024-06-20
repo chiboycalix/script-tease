@@ -4,7 +4,7 @@ const HorizontalScroll = () => {
   return (
     <div className="px-[1.5rem] xl:px-[5rem] py-[2rem] bg-primary-500 bg-opacity-20 flex text-black gap-4">
       <div className="md:basis-[20%]">
-        <p className="text-primary-500 font-black">1,200 + Real Results:</p>
+        <p className="text-primary-500 font-black">1,300 + Real Results:</p>
       </div>
       <marquee className="flex-1">
         <div>
