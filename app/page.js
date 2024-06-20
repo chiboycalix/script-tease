@@ -6,9 +6,9 @@ import HomeCarousel from "@/app/sections/carousel";
 import HomePageBlogs from "@/app/sections/homePageBlogs";
 import HomePageEvents from "@/app/sections/homePageEvents";
 import Faqs from "@/app/sections/faqs";
-import HorizontalScroll from "./sections/horizontalScroll";
 import Button from "@/components/Button";
 import Title from "@/components/Title";
+import { Maquee } from "@/app/sections/Maquee";
 
 const SectionHeader = ({ title, subTitle }) => {
   return (
@@ -33,8 +33,8 @@ export default function Home() {
   return (
     <main>
       <HomeCarousel />
-      <HorizontalScroll />
-
+      {/* <HorizontalScroll /> */}
+      <Maquee />
       <SectionWrapper>
         <SectionHeader
           title="Our Blogs"

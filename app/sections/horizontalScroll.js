@@ -9,8 +9,7 @@ const HorizontalScroll = () => {
       <marquee className="flex-1">
         <div>
           <span className="inline-block mr-20 text-primary-500">
-            🙌 “WebFX has been a game-changer for our web strategy.” | U.S.
-            Healthcare Company
+            🙌 “WebFX has been a game-changer for our web strategy.” | U.S. Healthcare Company
           </span>
           <span className="inline-block mr-20 text-primary-500">
             💲 47% increase in year-over-year revenue | Industrial Supplier
@@ -25,8 +24,7 @@ const HorizontalScroll = () => {
             💲📝 11% increase in leads from blog content | Hospitality Company
           </span>
           <span className="inline-block text-primary-500">
-            🍃 “WebFX has been a breath of fresh air.” | COO of Ecommerce
-            Company
+            🍃 “WebFX has been a breath of fresh air.” | COO of Ecommerce Company
           </span>
         </div>
       </marquee>
@@ -35,3 +33,4 @@ const HorizontalScroll = () => {
 };
 
 export default HorizontalScroll;
+

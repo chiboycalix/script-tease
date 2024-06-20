@@ -9,13 +9,13 @@ body {
   font-variation-settings:"slnt" 0;
 }
 
-@keyframes scroll {
+@keyframes scrollGloball {
   0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
 }
-.animate-scroll {
-  animation: scroll 20s linear infinite;
+.animate-scrollGlobal {
+  animation: scrollGloball 20s linear infinite;
 }
-.hover\:pause-scroll:hover {
+.hover\:pause-scrollGloball:hover {
   animation-play-state: paused;
 }
