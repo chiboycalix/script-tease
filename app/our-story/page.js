@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import Button from "@/components/Button";
 import Title from "@/components/Title";
+import Banner from "@/components/Banner";
 
 const SectionWrapper = ({ children }) => {
   return (
@@ -14,25 +14,17 @@ const SectionWrapper = ({ children }) => {
 const OurStory = () => {
   return (
     <div className="w-full">
-      <div
-        className="grid grid-cols-1 gap-4 bg-[#1D2C47] px-[1.5rem] py-[5rem]
-        xl:grid-cols-2 xl:px-[5rem] xl:py-[10rem] xs:px-[1rem]
-      "
-      >
-        <div className="flex flex-col justify-center items-center xl:items-start xl:text-left text-center">
-          <Title title="Digital Marketing That Drives Result" color="white" />
-          <p className="text-[#859396] mt-4 text-[21px] font-normal leading-[35px] title text-center xl:text-left">
-            With proprietary software powered by AI and billions of data points
+      <div className="bg-primary-950 py-[3rem]">
+        <Banner
+          title={(<span className="text-white">Digital Marketing That Drives Result</span>)}
+          description={(<span className="text-secondary">With proprietary software powered by AI and billions of data points
             from decades of industry-leading expertise, WebFX creates
             data-driven strategies that drive revenue, create jobs, and grow
-            businesses.
-          </p>
-          <div className="sm:w-[40%] mt-[2rem] w-[100%]">
-            <Button caption="Learn More" />
-          </div>
-        </div>
-        <div></div>
+            businesses.</span>)}
+          buttonCaption="Learn More"
+        />
       </div>
+
       <SectionWrapper>
         <Title title="More than just a place to work" color="black" />
         <div className="w-[100%] ml-[0%] text-center lg:w-[94%] lg:ml-[3%]">
@@ -80,8 +72,8 @@ const OurStory = () => {
               PARTNER WITH A DEDICATED AGENCY YOU CAN TRUST
             </p>
             <p className="text-[48px] font-black leading-[56px] mt-[1rem]">
-              <span className="text-primary-500">Nationally-recognized</span> awards
-              & partnerships
+              <span className="text-primary-500">Nationally-recognized</span>{" "}
+              awards & partnerships
             </p>
             <p className="text-[21px] w-full lg:w-[86%] mt-[2rem] text-[#222]">
               Our driving goal — to create new opportunities and revenue for
@@ -95,14 +87,18 @@ const OurStory = () => {
             </p>
           </div>
 
-          <div data-scroll data-scroll-speed="0.3" className="flex flex-col items-center text-center lg:items-start lg:text-left">
-          {/* <div className="flex flex-col items-center text-center lg:items-start lg:text-left"> */}
+          <div
+            data-scroll
+            data-scroll-speed="0.3"
+            className="flex flex-col items-center text-center lg:items-start lg:text-left"
+          >
+            {/* <div className="flex flex-col items-center text-center lg:items-start lg:text-left"> */}
             <p className="text-[#869298] font-bold">
               PARTNER WITH A DEDICATED AGENCY YOU CAN TRUST
             </p>
             <p className="text-[48px] font-black leading-[56px] mt-[1rem]">
-              <span className="text-primary-500">Nationally-recognized</span> awards
-              & partnerships
+              <span className="text-primary-500">Nationally-recognized</span>{" "}
+              awards & partnerships
             </p>
             <p className="text-[21px] w-full lg:w-[86%] mt-[2rem] text-[#222]">
               Our driving goal — to create new opportunities and revenue for

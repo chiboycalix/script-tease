@@ -1,82 +1,36 @@
 "use client";
 import { Carousel } from "@/components/material/MTailwind";
-import Button from "@/components/Button";
+import Banner from "@/components/Banner";
 
-const CarouselWrapper = ({ children }) => {
-  return (
-    <div
-      className="h-[30rem] w-full grid-cols-1 px-[1rem] lg:px-[3rem] gap-10 grid
-      xl:grid-cols-2 xl:px-[5rem]
-    "
-    >
-      {children}
-    </div>
-  );
-};
-const CarouselLeft = ({ title, description, buttonCaption }) => {
-  return (
-    <div className="h-full basis-1/2">
-      <h1
-        className="w-[100%] text-[30px] font-black text-center
-        md:text-[36px]
-        lg:text-[56px] lg:text-left
-        xl:text-[72px] xl:leading-[78px]
-      "
-      >
-        {title}
-      </h1>
-      <p className="w-[90%] text-[1.3rem] opacity-55 mt-3 text-center lg:text-left">
-        {description}
-      </p>
-      <div className="w-[100%] ml-[0%] sm:w-[50%] sm:ml-[25%] md:w-[60%] md:ml-[20%] lg:ml-[0%] flex mt-[2rem] items-center justify-center lg:justify-start">
-        <Button caption={buttonCaption} />
-      </div>
-    </div>
-  );
-};
-const CarouselRight = () => {
-  return <div className="h-full flex-1 flex justify-center lg:justify-start"></div>;
-};
 const CarouselItemOne = () => {
   return (
-    <CarouselWrapper>
-      <CarouselLeft
-        title="Bridging Industry and Education with Success!"
-        description="The ecosystem that connects organizations to universities, their
-          talent, and government institutions for hands-on projects that drive
-          academic and industry excellence."
-        buttonCaption="Become a Partner"
-      />
-      <CarouselRight />
-    </CarouselWrapper>
+    <Banner
+      title="Bridging Industry and Education with Success!"
+      description="The ecosystem that connects organizations to universities, their
+      talent, and government institutions for hands-on projects that drive
+      academic and industry excellence."
+      buttonCaption="Become a Partner"
+    />
   );
 };
 const CarouselItemTwo = () => {
   return (
-    <CarouselWrapper>
-      <CarouselLeft
-        title="Empower. Create. Transform. Our Purpose Defined."
-        description="Join us in shaping the future, fostering growth, and achieving
-          unparalleled success through meaningful collaboration."
-        buttonCaption="Schedule a Preview"
-      />
-
-      <CarouselRight />
-    </CarouselWrapper>
+    <Banner
+      title="Empower. Create. Transform. Our Purpose Defined."
+      description="Join us in shaping the future, fostering growth, and achieving
+      unparalleled success through meaningful collaboration."
+      buttonCaption="Schedule a Preview"
+    />
   );
 };
 const CarouselItemThree = () => {
   return (
-    <CarouselWrapper>
-      <CarouselLeft
-        title="Discover, Discuss, Inspire: Stories Unfold"
-        description="Join us in shaping the future, fostering growth, and achieving
+    <Banner
+      title="Discover, Discuss, Inspire: Stories Unfold"
+      description="Join us in shaping the future, fostering growth, and achieving
           unparalleled success through meaningful collaboration."
-        buttonCaption="More Blogs"
-      />
-
-      <CarouselRight />
-    </CarouselWrapper>
+      buttonCaption="More Blogs"
+    />
   );
 };
 const HomeCarousel = () => {
@@ -94,7 +48,9 @@ const HomeCarousel = () => {
             <span
               key={i}
               className={`block h-5 w-5 cursor-pointer rounded-2xl transition-all content-[''] ${
-                activeIndex === i ? "w-5 bg-primary-500" : "w-4 bg-primary-500/50"
+                activeIndex === i
+                  ? "w-5 bg-primary-500"
+                  : "w-4 bg-primary-500/50"
               }`}
               onClick={() => setActiveIndex(i)}
             />
