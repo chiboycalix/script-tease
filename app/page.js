@@ -8,7 +8,7 @@ import HomePageEvents from "@/app/sections/homePageEvents";
 import Faqs from "@/app/sections/faqs";
 import Button from "@/components/Button";
 import Title from "@/components/Title";
-import { Maquee } from "@/app/sections/Maquee";
+import { Maquee } from "@/app/sections/horizontalScroll";
 
 const SectionHeader = ({ title, subTitle }) => {
   return (
