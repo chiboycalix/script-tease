@@ -192,7 +192,7 @@ const NavListMenu = ({ navListMenuItems, menuTitle }) => {
 
 const NavList = () => {
   return (
-    <List className="mt-4 mb-6 lg:mt-0 lg:mb-0 lg:flex-row lg:p-3 items-left justify-center font-inter">
+    <List className="mt-4 mb-6 lg:mt-0 lg:mb-0 lg:flex-row lg:p-3 items-left justify-center">
       <NavListMenu navListMenuItems={aboutUs} menuTitle={"About Us"} />
       <NavListMenu navListMenuItems={community} menuTitle={"Community"} />
       <NavListMenu navListMenuItems={partners} menuTitle={"Partners"} />

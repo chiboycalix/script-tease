@@ -66,7 +66,7 @@ const OurStory = () => {
       {/* our approach */}
       <SectionWrapper>
         <Title title="Our Approach" color="black" />
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-[5rem]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:mt-[5rem] mt-[2rem]">
           <div className="flex flex-col items-center lg:items-start lg:text-left mb-[5rem] lg:mb-[0rem]">
             <p className="text-[#869298] font-bold">
               PARTNER WITH A DEDICATED AGENCY YOU CAN TRUST

@@ -14,7 +14,7 @@ const SectionHeader = ({ title, subTitle }) => {
   return (
     <div className="flex flex-col items-center mb-[3rem]">
       <Title title={title} />
-      <p className="text-[24px] lg:text-[28px] xl:text-[32px] text-center font-semibold leading-10">
+      <p className="text-[24px] lg:text-[28px] xl:text-[32px] text-center font-semibold leading-10 mt-[1rem]">
         {subTitle}
       </p>
     </div>
@@ -37,16 +37,16 @@ export default function Home() {
       <Maquee />
       <SectionWrapper>
         <SectionHeader
-          title="Our Blogs"
-          subTitle="Learn more about our blogs"
+          title="Updates"
+          subTitle="Explore our activities through the ecosystem."
         />
         <HomePageBlogs />
       </SectionWrapper>
 
       <div className="px-[1rem] py-[5rem]">
         <SectionHeader
-          title="Our partners"
-          subTitle="These are all our prtners"
+          title="Partners"
+          subTitle="Here are some of our partners"
         />
         <div className="px-[5rem]">
           <Partners />
@@ -54,9 +54,8 @@ export default function Home() {
       </div>
       <SectionWrapper>
         <SectionHeader
-          title="Your search ends here."
-          subTitle="Learn why businesses trust our digital marketing agency to power
-            growth."
+          title="Unlock Growth Opportunities"
+          subTitle="Heres why our partners trust us to be a driver for collaboration and success."
         />
         <HomeTabs />
       </SectionWrapper>
