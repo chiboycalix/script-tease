@@ -2,6 +2,7 @@ import React from "react";
 import BlogOne from "@/assets/blog-1.png";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogCategoryTitle } from "../blogs/universities";
 
 const studentsBlogs = [
   {
@@ -33,12 +34,7 @@ const studentsBlogs = [
 const StudentBlogs = () => {
   return (
     <div className="mt-[5rem]">
-      <div className="flex justify-start items-center gap-4">
-        <div className="w-[32px] h-[32px] rounded-full bg-primary-500"></div>
-        <div>
-          <p className="text-[32px] font-extrabold">Students</p>
-        </div>
-      </div>
+      <BlogCategoryTitle category="Students" />
 
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 mt-[2rem]">
         {studentsBlogs.map((studentsBlog) => {

@@ -6,7 +6,7 @@ import StudentsBlogs from "../sections/studentsBlogs";
 
 const Blogs = () => {
   return (
-    <div className="w-full md:p-[5rem] p-[3rem]">
+    <div className="w-full lg:p-[5rem] md:p-[3rem] p-[1rem]">
       <UniversitiesBlogs />
       <CompaniesBlogs />
       <GovernmentOrganisationBlogs />
