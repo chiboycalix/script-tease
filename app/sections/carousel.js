@@ -27,8 +27,9 @@ const CarouselItemThree = () => {
   return (
     <Banner
       title="Discover, Discuss, Inspire: Stories Unfold"
-      description="Join us in shaping the future, fostering growth, and achieving
-          unparalleled success through meaningful collaboration."
+      description="Explore updates on our activities for insights, success
+stories, and expert advice on education, industry trends, and student
+opportunities with SkillTribe"
       buttonCaption="More Blogs"
     />
   );
@@ -39,7 +40,7 @@ const HomeCarousel = () => {
       autoplay={true}
       loop={true}
       transition={{ duration: 1, type: "spring" }}
-      className="py-[5rem] bg-primary-500 bg-opacity-5"
+      className="py-[1rem] lg:py-[5rem] bg-primary-500 bg-opacity-5"
       prevArrow={({ handlePrev }) => <div className="hidden"></div>}
       nextArrow={({ handleNext }) => <div className="hidden"></div>}
       navigation={({ setActiveIndex, activeIndex, length }) => (
