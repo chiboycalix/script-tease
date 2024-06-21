@@ -106,7 +106,7 @@ const PhoneNumber = () => {
         strokeWidth={2.5}
         className={`h-5 w-5 transition-transform text-primary-500`}
       />
-      <span className="inline-block">+1 (555) 555-1234</span>
+      <span className="inline-block">+1 (514) 166-719</span>
     </p>
   );
 };

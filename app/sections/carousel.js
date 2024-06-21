@@ -39,7 +39,7 @@ const HomeCarousel = () => {
       autoplay={true}
       loop={true}
       transition={{ duration: 1, type: "spring" }}
-      className="py-[3rem] bg-primary-500 bg-opacity-5"
+      className="py-[5rem] bg-primary-500 bg-opacity-5"
       prevArrow={({ handlePrev }) => <div className="hidden"></div>}
       nextArrow={({ handleNext }) => <div className="hidden"></div>}
       navigation={({ setActiveIndex, activeIndex, length }) => (
