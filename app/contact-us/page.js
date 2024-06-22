@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, Textarea } from "@/components/material/MTailwind";
+import { Input, Textarea, Select, Option } from "@/components/material/MTailwind";
 import Button from "@/components/Button";
 import Title from "@/components/Title";
 
@@ -22,14 +22,16 @@ const ContactUs = () => {
   return (
     <div className="relative w-full py-[5rem] bg-primary-950 px-[2rem] mb-[20rem]">
       <div>
-        <div className="flex justify-center lg:pb-[15rem] pb-[45rem]">
+        <div className="flex justify-center lg:pb-[25rem] pb-[45rem]">
           <div className="lg:basis-[60%] basis-[100%]">
-            <div className="text-center lg:text-left"><Title title="Let’s do great work together." color="white" /></div>
+            <div className="text-center lg:text-left">
+              <Title title="Let’s do great work together." color="white" />
+            </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 xl:grid-cols-4 xl:gap-0 lg:gap-6 lg:grid-cols-2 mt-[2rem]">
-              <TitleAndDescription title="TOLL FREE" description="130000"/>
-              <TitleAndDescription title="SALES DIRECT" description="130000"/>
-              <TitleAndDescription title="FAX" description="130000"/>
-              <TitleAndDescription title="LOCAL" description="130000"/>
+              <TitleAndDescription title="TOLL FREE" description="130000" />
+              <TitleAndDescription title="SALES DIRECT" description="130000" />
+              <TitleAndDescription title="FAX" description="130000" />
+              <TitleAndDescription title="LOCAL" description="130000" />
             </div>
           </div>
           <div className="flex-1"></div>
@@ -52,20 +54,19 @@ const ContactUs = () => {
                 variant="static"
                 label={
                   <p className="font-bold text-[16px] text-[#2c3345]">
-                    Company
+                    Organisation
                   </p>
                 }
                 required
               />
             </InputWrapper>
+
             <InputWrapper>
-              <Input
-                variant="static"
-                label={
-                  <p className="font-bold text-[16px] text-[#2c3345]">Email</p>
-                }
-                required
-              />
+              <Select variant="static" label={(<p className="font-bold text-[16px] text-[#2c3345]">Select Organisation</p>)}>
+                <Option className="font-bold text-[16px] text-[#2c3345]">Company</Option>
+                <Option className="font-bold text-[16px] text-[#2c3345]">University</Option>
+                <Option className="font-bold text-[16px] text-[#2c3345]">Government Organisation</Option>
+              </Select>
             </InputWrapper>
             <InputWrapper>
               <Input
@@ -78,6 +79,18 @@ const ContactUs = () => {
                 required
               />
             </InputWrapper>
+
+            <InputWrapper>
+              <Input
+                variant="static"
+                label={
+                  <p className="font-bold text-[16px] text-[#2c3345]">Email</p>
+                }
+                required
+              />
+            </InputWrapper>
+            
+            
             <InputWrapper>
               <Textarea
                 variant="static"

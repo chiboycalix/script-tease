@@ -6,7 +6,7 @@ import Header from "@/app/sections/header";
 import Footer from "@/app/sections/footer";
 import "@/app/globals.css";
 import "@/components/styles/layout.css";
-import { googleSans } from "@/constants/fonts";
+import { inter } from "@/constants/fonts";
 
 export default function RootLayout({ children }) {
   return (
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       </Head>
 
       <ThemeProvider>
-        <body className={googleSans.className}>
+        <body className={inter.className}>
           <Header />
           <div className="content lg:mt-[5rem] mt-[4rem]">{children}</div>
           <Footer />

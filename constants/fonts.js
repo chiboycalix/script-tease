@@ -1,6 +1,6 @@
 import localFont from 'next/font/local'
 
-export const googleSans = localFont({
+export const inter = localFont({
   src: [
     {
       path: '../assets/fonts/Inter/Inter-Black.ttf',
