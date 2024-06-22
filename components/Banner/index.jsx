@@ -3,7 +3,7 @@ import BannerWrapper from "./BannerWrapper";
 import LeftContent from "./LeftContent";
 import RightContent from "./RightContent";
 
-const Banner = ({ title, description, buttonCaption }) => {
+const Banner = ({ title, description, buttonCaption=null }) => {
   return (
     <BannerWrapper>
       <LeftContent

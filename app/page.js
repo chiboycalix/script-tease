@@ -10,7 +10,7 @@ import Button from "@/components/Button";
 import Title from "@/components/Title";
 import { Maquee } from "@/app/sections/horizontalScroll";
 
-const SectionHeader = ({ title, subTitle }) => {
+export const SectionHeader = ({ title, subTitle }) => {
   return (
     <div className="flex flex-col items-center mb-[3rem]">
       <Title title={title} />

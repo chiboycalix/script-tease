@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from "@/components/Button";
 
-const LeftContent = ({ title, description, buttonCaption }) => {
+const LeftContent = ({ title, description, buttonCaption=null }) => {
     return (
       <div className="h-full basis-1/2">
         <h1
@@ -16,9 +16,10 @@ const LeftContent = ({ title, description, buttonCaption }) => {
         <p className="w-[90%] text-[1.3rem] opacity-55 mt-3">
           {description}
         </p>
-        <div className="w-[100%] ml-[0%] sm:w-[50%] md:w-[60%] flex mt-[2rem] items-center justify-center lg:justify-start">
+        {buttonCaption && <div className="w-[100%] ml-[0%] sm:w-[50%] md:w-[60%] flex mt-[2rem] items-center justify-center lg:justify-start">
           <Button caption={buttonCaption} />
-        </div>
+        </div> }
+        
       </div>
     );
   };
