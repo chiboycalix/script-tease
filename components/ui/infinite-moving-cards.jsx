@@ -77,11 +77,11 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="max-w-full relative rounded-2xl border flex-shrink-0 px-8"
+            className="max-w-full relative rounded-2xl flex-shrink-0 px-8"
             key={item.title}
           >
               <div className="relative flex flex-row items-center">
-                  <span className="text-primary-500 font-black">
+                  <span className="text-primary-500 font-bold">
                     {item.title}
                 </span>
               </div>
