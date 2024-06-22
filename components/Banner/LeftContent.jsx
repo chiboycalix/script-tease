@@ -8,7 +8,7 @@ const LeftContent = ({ title, description, buttonCaption }) => {
           className="w-[100%] text-[30px] font-black
           md:text-[36px]
           lg:text-[56px] 
-          xl:text-[72px] xl:leading-[78px]
+          xl:text-[60px] xl:leading-[66px]
         "
         >
           {title}
@@ -16,7 +16,7 @@ const LeftContent = ({ title, description, buttonCaption }) => {
         <p className="w-[90%] text-[1.3rem] opacity-55 mt-3">
           {description}
         </p>
-        <div className="w-[100%] ml-[0%] sm:w-[50%] sm:ml-[25%] md:w-[60%] md:ml-[20%] lg:ml-[0%] flex mt-[2rem] items-center justify-center lg:justify-start">
+        <div className="w-[100%] ml-[0%] sm:w-[50%] md:w-[60%] flex mt-[2rem] items-center justify-center lg:justify-start">
           <Button caption={buttonCaption} />
         </div>
       </div>

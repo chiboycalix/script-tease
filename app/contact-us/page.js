@@ -50,6 +50,14 @@ const ContactUs = () => {
               />
             </InputWrapper>
             <InputWrapper>
+              <Select variant="static" label={(<p className="font-bold text-[16px] text-[#2c3345]">Select Organisation</p>)}>
+                <Option className="font-bold text-[16px] text-[#2c3345]">Company</Option>
+                <Option className="font-bold text-[16px] text-[#2c3345]">University</Option>
+                <Option className="font-bold text-[16px] text-[#2c3345]">Student</Option>
+              </Select>
+            </InputWrapper>
+            
+            <InputWrapper>
               <Input
                 variant="static"
                 label={
@@ -61,13 +69,7 @@ const ContactUs = () => {
               />
             </InputWrapper>
 
-            <InputWrapper>
-              <Select variant="static" label={(<p className="font-bold text-[16px] text-[#2c3345]">Select Organisation</p>)}>
-                <Option className="font-bold text-[16px] text-[#2c3345]">Company</Option>
-                <Option className="font-bold text-[16px] text-[#2c3345]">University</Option>
-                <Option className="font-bold text-[16px] text-[#2c3345]">Government Organisation</Option>
-              </Select>
-            </InputWrapper>
+    
             <InputWrapper>
               <Input
                 variant="static"
