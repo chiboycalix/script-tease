@@ -43,7 +43,7 @@ const fertile = [
 
 const Alphabets = ({ letter, paragraph, span, id }) => {
   return (
-    <div className="relative mb-[2rem] h-[500px] sm:h-[700px] md:h-[900px] values">
+    <div className="mb-[2rem] h-[500px] sm:h-[700px] md:h-[900px] values">
       <div
         className={`w-full ${letter === "F" && "bg-[#4CC0B9]"}
                 ${letter === "E" && id === 2 && "bg-[#24B06C]"}
@@ -86,7 +86,6 @@ const Alphabets = ({ letter, paragraph, span, id }) => {
             </p>
           </div>
         </div>
-        <div className="top-[16rem] sm:top-[20rem] md:top-[25rem] absolute h-[400px] w-[90%] ml-[5%] bg-white drop-shadow-lg rounded-md"></div>
       </div>
     </div>
   );
@@ -103,12 +102,14 @@ const OurValues = () => {
               "md:text-[48px] text-[32px] font-black text-white relative z-20 w-full ml-[0%] sm:w-[90%] sm:ml-[5%] text-center"
             )}
           >
-            We are not like this because we work here. We are here because we
-            are like this.
+            Cultivating a sustainable ecosystem FERTILE for transformative
+            success.
           </h1>
           <p className="text-center mt-2 text-neutral-300 relative z-20 text-white md:text-[21px] text-[18px]">
-            At SkillTease, we live by our POSITIVE Code that guides us through
-            work and life:
+            At SkillTribe, our FERTILE values—Focus, Enthusiasm, Responsibility,
+            Trust, Innovation, Leadership, and Empowerment—define our commitment
+            to nurturing talent and cultivating success in every project and
+            partnership.
           </p>
         </div>
         <div

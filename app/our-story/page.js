@@ -4,8 +4,10 @@ import Title from "@/components/Title";
 import Banner from "@/components/Banner";
 import { SectionHeader } from "../page";
 
-const Span = ({ text }) => {
-  return <span className="text-primary-500 font-bold">{text}</span>;
+const Span = ({ text, color = "black" }) => {
+  const spanColor =
+    color === "black" ? "font-bold" : "text-primary-500 font-black";
+  return <span className={`${spanColor}`}>{text}</span>;
 };
 const SectionWrapper = ({ children }) => {
   return (
@@ -18,20 +20,13 @@ const SectionWrapper = ({ children }) => {
 const OurStory = () => {
   return (
     <div className="w-full">
-      <div className="bg-primary-950 lg:py-[5rem] py-[1rem]">
-        <Banner
-          title={
-            <span className="text-white">
-              Driving excellence through transformative practical experiences
-            </span>
-          }
-          description={
-            <span className="text-secondary">
-             
-            </span>
-          }
-          // buttonCaption="Learn More"
-        />
+      <div className="bg-primary-950 lg:py-[5rem] py-[1rem] flex lg:flex-row flex-col justify-between items-center xl:px-[5rem] px-[1rem]">
+        <div className="basis-[50%]">
+          <p className="text-white text-opacity-85 text-[30px] leading-[38px] md:text-[56px] lg:text-[72px] md:leading-[66px] font-black lg:leading-[78px]">
+            Driving excellence through transformative practical experiences
+          </p>
+        </div>
+        <div className="flex-1"></div>
       </div>
 
       <SectionWrapper>
@@ -133,6 +128,10 @@ const OurStory = () => {
         />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:mt-0 -mt-[3rem]">
           <div className="flex flex-col items-center lg:items-start lg:text-left">
+            <p className="text-[30px] lg:text-[48px] font-black leading-[40px] lg:leading-[56px] mt-[1rem] ">
+              <Span text="Excellence in project" color="primary" /> completion
+              is ingrained in our FERTILE approach
+            </p>
             <p className="text-[21px] w-full mt-[2rem] text-[#222]">
               At our organization, excellence in project completion is ingrained
               in our approach, guided by the core values encapsulated in the
@@ -145,14 +144,14 @@ const OurStory = () => {
               by a passion for delivering exceptional results, consistently
               raising the bar for quality and innovation.
             </p>
+          </div>
+
+          <div className="flex flex-col items-center lg:items-start lg:text-left mb-[1rem] lg:mb-[0rem]">
             <p className="text-[21px] w-full mt-[2rem] text-[#222]">
               <Span text="RESPONSIBILITY" /> is at the heart of our work ethic,
               as we take ownership of tasks and commitments, ensuring timely and
               efficient project execution.
             </p>
-          </div>
-
-          <div className="flex flex-col items-center lg:items-start lg:text-left mb-[1rem] lg:mb-[0rem]">
             <p className="text-[21px] w-full mt-[2rem] text-[#222]">
               <Span text="TRUST" /> is paramount in our relationships, both
               internally and with our clients, fostering transparency,
