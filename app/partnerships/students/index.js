@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
 import Partners from "../../sections/partners";
-import { CenteredTextBlock, Item } from "../components";
+import { CenteredTextBlock, Metrics } from "../components";
 import TabComponent from "../tab";
 import { students } from "../tab/data";
 import { useWindowSize } from "@uidotdev/usehooks";
 import { SCREEN_SIZES } from "@/constants";
+import { studentsData } from "../data/metrics";
 
 const Students = () => {
   const { width } = useWindowSize();
@@ -26,12 +27,7 @@ const Students = () => {
         )}
       </div>
 
-      <div className="w-full grid grid-cols-4 mt-[5rem]">
-        <Item percentage="100%" value="SET UP BY SKILLTEASE" />
-        <Item percentage="$500K" value="BUILT-IN VALUE" />
-        <Item percentage="20%" value="AVG INCREASE IN ROI" />
-        <Item percentage="$1B" value="DATA POINTS THAT DRIVE DECISION MAKING" />
-      </div>
+      <Metrics data={studentsData}/>
       <div className="mt-[5rem]">
         <Partners />
       </div>

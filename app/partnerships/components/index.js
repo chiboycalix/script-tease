@@ -1,17 +1,13 @@
-export const CenteredTextBlock = ({ 
-  title, 
-  description, 
-  titleClassName = "text-[48px] font-extrabold", 
-  descriptionClassName = "text-[21px] leading-[35px]" 
+export const CenteredTextBlock = ({
+  title,
+  description,
+  titleClassName = "text-[48px] font-extrabold",
+  descriptionClassName = "text-[21px] leading-[35px]",
 }) => {
   return (
     <div className="w-full">
-      <p className={`text-center ${titleClassName}`}>
-        {title}
-      </p>
-      <p className={`text-center ${descriptionClassName}`}>
-        {description}
-      </p>
+      <p className={`text-center ${titleClassName}`}>{title}</p>
+      <p className={`text-center ${descriptionClassName}`}>{description}</p>
     </div>
   );
 };
@@ -45,6 +41,16 @@ export const Description = ({ title, description, list }) => {
           );
         })}
       </ul>
+    </div>
+  );
+};
+
+export const Metrics = ({ data }) => {
+  return (
+    <div className="w-full grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 mt-[5rem]">
+      {data.map((d) => {
+        return <Item key={d.id} percentage={d.percentage} value={d.value} />;
+      })}
     </div>
   );
 };
