@@ -1,8 +1,13 @@
 import React from 'react'
+import SectionOne from './section-one'
+import SectionTwo from './section-two'
 
 const Companies = () => {
   return (
-    <div className="xl:px-[5rem] px-[1rem] py-[1rem] lg:py-[5rem]">Companies</div>
+    <div className="w-full">
+      <SectionOne />
+      <SectionTwo />
+    </div>
   )
 }
 
