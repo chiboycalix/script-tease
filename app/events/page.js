@@ -1,11 +1,16 @@
 "use client";
-import BlogOne from "@/assets/blog-1.png";
 import Image from "next/image";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 import "./events.css";
-import { CommunityImpactEvent, MeetAndGreet, MontrealLaunch, SkillTribeProfile, SpringFest } from "@/constants";
+import {
+  CommunityImpactEvent,
+  MeetAndGreet,
+  MontrealLaunch,
+  SkillTribeProfile,
+  SpringFest,
+} from "@/constants";
 import { useWindowSize } from "@uidotdev/usehooks";
 
 export const projects = [
@@ -16,7 +21,6 @@ export const projects = [
     src: CommunityImpactEvent,
     link: "",
     backgroundColor: "#4CC0B9",
-    // backgroundColor: "#000000",
     textColor: "#FFFFFF",
   },
   {
@@ -26,7 +30,6 @@ export const projects = [
     src: MeetAndGreet,
     link: "",
     backgroundColor: "#24B06C",
-    // backgroundColor: "#2a2a2a",
     textColor: "#FFFFFF",
   },
   {
@@ -36,7 +39,6 @@ export const projects = [
     src: MontrealLaunch,
     link: "",
     backgroundColor: "#98CC63",
-    // backgroundColor: "#555555",
     textColor: "#FFFFFF",
   },
   {
@@ -46,7 +48,6 @@ export const projects = [
     src: SkillTribeProfile,
     link: "",
     backgroundColor: "#FED02C",
-    // backgroundColor: "#808080",
     textColor: "#FFFFFF",
   },
   {
@@ -56,7 +57,6 @@ export const projects = [
     src: SpringFest,
     link: "",
     backgroundColor: "#F6941C",
-    // backgroundColor: "#aaaaaa",
     textColor: "#FFFFFF",
   },
 ];
@@ -77,9 +77,13 @@ const EventCard = ({
     target: container,
     offset: ["start end", "start start"],
   });
-  const {width} = useWindowSize();
+  const { width } = useWindowSize();
 
-  const imageScale = useTransform(scrollYProgress, [0, width >= 640 ? 1 : 0], [2, 1]);
+  const imageScale = useTransform(
+    scrollYProgress,
+    [0, width >= 640 ? 1 : 0],
+    [0, 1]
+  );
   const scale = useTransform(progress, range, [1, targetScale]);
   return (
     <div ref={container} className="cardContainer">
@@ -88,7 +92,7 @@ const EventCard = ({
           backgroundColor: backgroundColor,
           color: textColor,
           scale,
-          top: `calc(-5vh + ${i * 25}px)`,
+          top: `calc(-10vh + ${i * 25}px)`,
         }}
         className="card"
       >
@@ -100,7 +104,7 @@ const EventCard = ({
           </div>
 
           <div className="description">
-          <h2 className="text-[24px] lg:text-[40px] font-black">{title}</h2>
+            <h2 className="text-[24px] lg:text-[40px] font-black">{title}</h2>
             <p className="mb-[2rem]">{description}</p>
             <button
               className={`bg-white hover:bg-opacity-90 text-[${backgroundColor}] text-[20px] font-black w-[50%] py-[1rem] rounded-md cursor-pointer`}
@@ -124,7 +128,7 @@ const Events = () => {
   useEffect(() => {
     const lenis = new Lenis();
     function raf(time) {
-      lenis.raf(time)
+      lenis.raf(time);
       requestAnimationFrame(raf);
     }
 
@@ -132,8 +136,10 @@ const Events = () => {
   }, []);
 
   return (
-    <div className="w-full py-[5rem] sm:py-[3rem] xl:px-[5rem] px-[1rem] lg:px-[3rem] bg-primary-500 bg-opacity-5" ref={container}>
-      <p className="text-[48px] font-black">Events</p>
+    <div
+      className="w-full py-[2rem] sm:py-[3rem] xl:px-[5rem] px-[1rem] lg:px-[3rem] bg-primary-500 bg-opacity-5"
+      ref={container}
+    >
       {projects.map((project, i) => {
         const targetScale = 1 - (project.length - i) * 0.05;
         return (
