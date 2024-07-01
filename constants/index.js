@@ -12,6 +12,10 @@ import ShopifyPartner from "@/assets/shopify-partner.png";
 import AmazonPartner from "@/assets/amazon.png";
 import MicrosoftPartner from "@/assets/microsoft-advertising-partner.png";
 
+const SCREEN_SIZES = {
+  IPAD: 1024
+}
+
 export {
   CommunityImpactEvent,
   MeetAndGreet,
@@ -25,5 +29,6 @@ export {
   ClubPartner,
   ShopifyPartner,
   AmazonPartner,
-  MicrosoftPartner
+  MicrosoftPartner,
+  SCREEN_SIZES
 };

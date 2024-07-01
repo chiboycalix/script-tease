@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const ResponsiveTitle = ({ title, textColor }) => {
   return (
     <div className='py-[5rem]'>
