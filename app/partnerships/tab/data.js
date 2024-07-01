@@ -111,26 +111,6 @@ collaborations, and new business opportunities."
       />
     ),
   },
-  {
-    label: "Flexibility and Scalability",
-    value: "flexibility-ands-calability",
-    icon: Cog6ToothIcon,
-    desc: (
-      <Description
-        title="Empower your sales team to close more leads"
-        description="SkillTribe offers flexible engagement options, allowing companies to scale their involvement
-based on current needs and resources. Whether you need support for a short-term project or are
-looking for a long-term partnership, SkillTribe can accommodate your requirements."
-        list={[
-          "Adaptable Solutions: Tailor engagements to fit your company’s specific needs.",
-          "Scalable Involvement: Increase or decrease participation as required.",
-          "Project-Based Support: Access talent for individual projects or ongoing work.",
-          "Resource Management: Optimize your use of resources with flexible terms.",
-          "Growth Potential: Expand your collaboration as your business evolves.",
-        ]}
-      />
-    ),
-  },
 ];
 
 export const univeristies = [
@@ -238,27 +218,6 @@ engagement enhances the university’s reputation and fosters goodwill among sta
       />
     ),
   },
-  {
-    label: "Flexible Engagement Models",
-    value: "flexible-engagement-models",
-    icon: Cog6ToothIcon,
-    desc: (
-      <Description
-        title="Empower your sales team to close more leads"
-        description="SkillTribe offers universities flexible engagement models
-tailored to meet specific academic and institutional needs. Whether seeking short-term
-collaborations or long-term partnerships, universities can choose the model that best aligns with
-their goals and resources."
-        list={[
-          "Project-based Partnerships: Engage in short-term projects with defined deliverables.",
-          "Long-term Collaborations: Establish ongoing partnerships for sustained impact.",
-          "Customized Programs: Tailor initiatives to align with academic objectives.",
-          "Resource Allocation: Optimize use of university resources and facilities.",
-          "Adaptive Solutions: Scale involvement based on evolving institutional priorities.",
-        ]}
-      />
-    ),
-  },
 ];
 
 export const students = [
@@ -361,26 +320,6 @@ various career paths, gain insights into different industries, and clarify their
           "Resume Enhancement: Strengthen your resume with practical experience.",
           "Professional Networking: Build connections with industry professionals.",
           "Career Guidance: Receive mentorship and guidance for career development.",
-        ]}
-      />
-    ),
-  },
-  {
-    label: "Community Impact and Social Responsibility",
-    value: "Community Impact and Social Responsibility",
-    icon: Cog6ToothIcon,
-    desc: (
-      <Description
-        title="Community Impact and Social Responsibility"
-        description="SkillTribe projects enable students to make a
-positive impact on their communities by addressing local challenges and contributing to
-sustainable development goals."
-        list={[
-          "Social Responsibility: Contribute to community development initiatives.",
-          "Public Engagement: Raise awareness of societal issues through projects.",
-          "Volunteer Opportunities: Engage in meaningful community service projects.",
-          "Collaboration with NGOs: Partner with non-profit organizations for social impact.",
-          "Leadership Development: Gain leadership skills through community-focused initiatives.",
         ]}
       />
     ),

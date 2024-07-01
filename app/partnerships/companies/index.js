@@ -7,6 +7,8 @@ import { companies } from "../tab/data";
 import { useWindowSize } from "@uidotdev/usehooks";
 import { SCREEN_SIZES } from "@/constants";
 import { companiesData } from "../data/metrics";
+import Button from "@/components/Button";
+import Link from "next/link";
 
 const Companies = () => {
   const { width } = useWindowSize();
@@ -29,9 +31,14 @@ const Companies = () => {
         )}
       </div>
 
-      <Metrics data={companiesData}/>
+      <Metrics data={companiesData} />
       <div className="mt-[5rem]">
         <Partners />
+      </div>
+      <div className="mx-auto w-[20%] mt-[2rem]">
+        <Link href="/companies">
+          <Button caption="See More" />
+        </Link>
       </div>
     </div>
   );

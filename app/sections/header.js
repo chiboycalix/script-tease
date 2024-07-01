@@ -80,22 +80,22 @@ const community = [
 ];
 const partners = [
   {
-    title: "Products",
+    title: "Companies",
     description: "Find the perfect solution for your needs.",
     icon: SquaresPlusIcon,
-    path: "our-story",
+    path: "companies",
   },
   {
-    title: "Programs",
+    title: "Students",
     description: "Explore limited-time deals and bundles",
     icon: TagIcon,
-    path: "programs",
+    path: "students",
   },
   {
-    title: "About Us",
+    title: "Universities",
     description: "Meet and learn about our dedication",
     icon: UserGroupIcon,
-    path: "our-story",
+    path: "universities",
   },
 ];
 
@@ -206,11 +206,6 @@ const NavList = () => {
           Contact us
         </ListItem>
       </Link>
-      {/* <Link href="/sample">
-        <ListItem className="lg:ml-2 ml-0 flex items-center justify-start py-4 text-black font-medium hover:bg-primary-500 hover:bg-opacity-10 hover:text-primary-500">
-          Sample
-        </ListItem>
-      </Link> */}
     </List>
   );
 };
