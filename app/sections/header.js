@@ -234,7 +234,7 @@ const Header = () => {
   return (
     <>
       <div className="max-h-[768px] w-[calc(100%+48px)] overflow-scroll">
-        <Navbar className="sticky top-0 z-[100] h-max w-full max-w-screen-3xl rounded-none bg-white px-[1rem] bg-opacity-100 py-2">
+        <Navbar className="sticky top-0 z-[100] h-max w-full max-w-screen-4xl rounded-none bg-white px-[1rem] bg-opacity-100 py-2">
           <div className="flex items-center gap-10 justify-between text-black">
             <Link href="/" className="cursor-pointer py-1.5 basis-[10%]">
               Logo

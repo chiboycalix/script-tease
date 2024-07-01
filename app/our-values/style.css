@@ -1,0 +1,41 @@
+@media only screen and (min-width: 275px) {
+  .fertile {
+    top: 40rem
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .fertile {
+    top: 28rem
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .fertile {
+    top:26rem
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .fertile {
+    top:33rem
+  }
+}
+
+@media only screen and (min-width: 974px) {
+  .fertile {
+    top:28rem
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .fertile {
+    top:26rem
+  }
+}
+
+@media only screen and (min-width: 1952px) {
+  .fertile {
+    top:22rem
+  }
+}
